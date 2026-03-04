@@ -1,6 +1,7 @@
 import {
     Link
 } from "react-router-dom";
+import styles from '../styles/navbarButton.module.css';
 
 export default function NavbarButton({
     link,
@@ -9,7 +10,7 @@ export default function NavbarButton({
     icon, 
 }) {
 
-    let buttonStyle = "defaultButton"
+    let buttonStyle = styles.button;
 
     return (
         <Link to={ link }>

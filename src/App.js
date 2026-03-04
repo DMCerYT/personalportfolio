@@ -16,6 +16,7 @@ import UnderConstruction from "./components/UnderConstruction";
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Projects from "./pages/Projects";
+import TestPage from './pages/Test';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/superdupertestpageletsgo" element={<TestPage />} />
         </Routes>
       </BrowserRouter>
       {/** Any Alert should show up here */}
