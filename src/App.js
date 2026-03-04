@@ -15,6 +15,7 @@ import UnderConstruction from "./components/UnderConstruction";
 // Getting Pages
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       {/* Content goes here! */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>

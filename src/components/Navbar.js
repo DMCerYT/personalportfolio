@@ -6,7 +6,7 @@ import NavbarButton from './NavbarButton';
 function NavbarLogo() {
     return (
         <img class = "portfolio-logo"
-        src = {logo}
+        src = { logo }
         alt = 'Logo'
         />
     );
@@ -17,8 +17,8 @@ export default function NavigationBar() {
         <div>
             <NavbarLogo></NavbarLogo>
             <NavbarButton text="HOME" link='/'/>
+            <NavbarButton text="PROJECTS" link='/projects' />
             <NavbarButton text="CONTACT" link='/contact'/>
-            
         </div>
     );
 }
