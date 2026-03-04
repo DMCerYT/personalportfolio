@@ -1,23 +1,27 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+
 import logo from './logo.svg';
+import TheEpicTestString from './components/TestText';
+import Navbar from './components/Navbar';
+
 import './App.css';
+import UnderConstruction from "./components/UnderConstruction";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/** Any Alert should show up here */}
+      {/*Navbar*/}
+      <Navbar></Navbar>
+      {/*Home page*/}
+
+      {/*Footer*/}
+      
+
     </div>
   );
 }
