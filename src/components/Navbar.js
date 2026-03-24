@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/avatarlogo.jpeg';
 import NavbarButton from './NavbarButton';
@@ -26,9 +26,45 @@ function NavbarLogo() {
 }
 
 export default function NavigationBar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuState, setMenuState] = useState('closed');
 
-  const closeMenu = () => setIsMenuOpen(false);
+  const isMenuMounted = menuState !== 'closed';
+  const isMenuOpen = menuState === 'open';
+
+  useEffect(() => {
+    if (menuState !== 'closing') {
+      return undefined;
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setMenuState('closed');
+    }, 220);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [menuState]);
+
+  const openMenu = () => {
+    setMenuState('open');
+  };
+
+  const closeMenu = () => {
+    setMenuState((currentState) => {
+      if (currentState === 'closed') {
+        return currentState;
+      }
+
+      return 'closing';
+    });
+  };
+
+  const toggleMenu = () => {
+    if (menuState === 'open') {
+      closeMenu();
+      return;
+    }
+
+    openMenu();
+  };
 
   return (
     <>
@@ -50,8 +86,13 @@ export default function NavigationBar() {
       </header>
 
       <div className={styles.mobileNavWrap}>
-        {isMenuOpen ? (
-          <nav className={styles.mobileMenu} aria-label="Mobile navigation">
+        {isMenuMounted ? (
+          <nav
+            className={`${styles.mobileMenu} ${
+              menuState === 'closing' ? styles.mobileMenuExit : styles.mobileMenuEnter
+            }`}
+            aria-label="Mobile navigation"
+          >
             {NAV_ITEMS.map((item) => (
               <NavbarButton
                 key={item.link}
@@ -72,7 +113,7 @@ export default function NavigationBar() {
             className={styles.mobileMenuButton}
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            onClick={() => setIsMenuOpen((open) => !open)}
+            onClick={toggleMenu}
           >
             <img src={ICONS.menu} alt="" aria-hidden="true" />
           </button>

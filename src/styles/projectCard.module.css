@@ -9,8 +9,6 @@
 }
 
 .glass {
-  backdrop-filter: blur(30px) saturate(145%);
-  -webkit-backdrop-filter: blur(30px) saturate(145%);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(124, 174, 221, 0.16)),
     rgba(49, 98, 154, 0.16);
@@ -31,12 +29,14 @@
   display: grid;
   gap: 14px;
   padding: 11px;
+  grid-template-rows: auto auto auto;
 }
 
 .image {
+  aspect-ratio: 1 / 1;
   border-radius: 10px;
   display: block;
-  height: 240px;
+  height: auto;
   object-fit: cover;
   width: 100%;
 }
@@ -44,8 +44,6 @@
 .titleCard,
 .descriptionCard {
   align-items: center;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.72));
   border: 1px solid rgba(255, 255, 255, 0.54);
@@ -75,11 +73,15 @@
 }
 
 .desktopDescription {
+  display: -webkit-box;
   font-family: 'Geologica', sans-serif;
   font-size: 1.25rem;
   letter-spacing: 0.03em;
   line-height: 1.25;
   margin: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .mobileCta {
@@ -101,6 +103,7 @@
 
   .image {
     grid-row: 1 / span 2;
+    aspect-ratio: 1 / 1;
     height: 134px;
     width: 134px;
   }

@@ -1,8 +1,29 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import UnderConstruction from '../components/UnderConstruction';
+import ProjectCard from '../components/ProjectCard';
+import { projects } from '../data/projects';
 import styles from '../styles/pageLayout.module.css';
 
 export default function Home() {
+  const featuredProjects = projects.slice(0, 4);
+  const mobileCarouselPages = [];
+
+  for (let index = 0; index < featuredProjects.length; index += 2) {
+    mobileCarouselPages.push(featuredProjects.slice(index, index + 2));
+  }
+
+  const [activeCarouselPage, setActiveCarouselPage] = useState(0);
+
+  const showPreviousPage = () => {
+    setActiveCarouselPage((currentPage) =>
+      currentPage === 0 ? mobileCarouselPages.length - 1 : currentPage - 1
+    );
+  };
+
+  const showNextPage = () => {
+    setActiveCarouselPage((currentPage) => (currentPage + 1) % mobileCarouselPages.length);
+  };
+
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
@@ -22,7 +43,66 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <UnderConstruction pageName="The full home experience" />
+        <div className={styles.heroAside}>
+          <p className={styles.heroAsideLabel}>Highlighted Work</p>
+          <div className={styles.heroAsideList}>
+            {projects.slice(0, 2).map((project) => (
+              <Link key={project.slug} className={styles.heroAsideItem} to={`/projects/${project.slug}`}>
+                <span>{project.title}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h1>Highlighted Projects</h1>
+          <p>
+            Desktop dynamically limits visible cards to avoid overlap. Mobile uses a
+            button-driven two-project carousel instead of horizontal scrolling.
+          </p>
+        </div>
+
+        <div className={styles.featuredProjectsDesktop}>
+          {featuredProjects.slice(0, 2).map((project) => (
+            <div key={project.slug} className={styles.featuredProjectItem}>
+              <ProjectCard
+                title={project.title}
+                description={project.summary}
+                image={project.image}
+                to={`/projects/${project.slug}`}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.featuredProjectsMobile}>
+          <div className={styles.carouselControls}>
+            <button type="button" className={styles.carouselButton} onClick={showPreviousPage}>
+              Previous
+            </button>
+            <p className={styles.carouselStatus}>
+              {activeCarouselPage + 1} / {mobileCarouselPages.length}
+            </p>
+            <button type="button" className={styles.carouselButton} onClick={showNextPage}>
+              Next
+            </button>
+          </div>
+
+          <div className={styles.carouselPage}>
+            {mobileCarouselPages[activeCarouselPage].map((project) => (
+              <div key={project.slug} className={styles.featuredProjectItem}>
+                <ProjectCard
+                  title={project.title}
+                  description={project.summary}
+                  image={project.image}
+                  to={`/projects/${project.slug}`}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
     </main>
   );

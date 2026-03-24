@@ -1,7 +1,6 @@
 import SocialCard from '../components/SocialCard';
 import styles from '../styles/pageLayout.module.css';
-import logo from '../assets/avatarlogo.jpeg';
-import capybara from '../images/cute-cartoon-capybara-cap-sunglasses-600nw-2575177821.jpg.webp';
+import { socialLinks } from '../data/socialLinks';
 
 export default function Contact() {
   return (
@@ -15,24 +14,15 @@ export default function Contact() {
       </section>
 
       <section className={styles.socialGrid}>
-        <SocialCard
-          name="GitHub"
-          handle="@DMCer"
-          image={logo}
-          href="https://github.com/"
-        />
-        <SocialCard
-          name="LinkedIn"
-          handle="@Emmanuel Munoz"
-          image={capybara}
-          href="https://www.linkedin.com/"
-        />
-        <SocialCard
-          name="Email"
-          handle="emunoz31@gatech.edu"
-          image={logo}
-          href="mailto:emunoz31@gatech.edu"
-        />
+        {socialLinks.map((link) => (
+          <SocialCard
+            key={`${link.name}-${link.handle}`}
+            name={link.name}
+            handle={link.handle}
+            image={link.image}
+            href={link.href}
+          />
+        ))}
       </section>
     </main>
   );

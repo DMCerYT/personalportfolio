@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
 import styles from '../styles/projectCard.module.css';
 
 export default function ProjectCard({
   title,
   description,
   image,
+  to,
   href,
   cta = 'Read More',
 }) {
@@ -24,8 +26,18 @@ export default function ProjectCard({
     </>
   );
 
-  if (!href) {
+  if (!href && !to) {
     return <article className={styles.card}>{content}</article>;
+  }
+
+  if (to) {
+    return (
+      <article className={styles.card}>
+        <Link className={styles.link} to={to} aria-label={`${cta}: ${title}`}>
+          {content}
+        </Link>
+      </article>
+    );
   }
 
   return (
