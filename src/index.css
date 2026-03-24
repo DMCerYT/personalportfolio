@@ -1,13 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffffff;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  color: #0d1c2d;
+  font-family: 'Geologica', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }

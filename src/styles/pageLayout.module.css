@@ -1,0 +1,120 @@
+.page {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 168px 24px 120px;
+}
+
+.hero {
+  align-items: start;
+  backdrop-filter: blur(34px) saturate(145%);
+  -webkit-backdrop-filter: blur(34px) saturate(145%);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.46), rgba(174, 221, 255, 0.24)),
+    linear-gradient(135deg, rgba(0, 134, 244, 0.12), rgba(102, 129, 249, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  border-radius: 40px;
+  box-shadow:
+    0 22px 44px rgba(24, 144, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.52);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  padding: 40px;
+}
+
+.heroCopy h1,
+.sectionHeader h1 {
+  color: #1890ff;
+  font-family: 'Geologica', sans-serif;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin: 0 0 16px;
+}
+
+.heroCopy p,
+.sectionHeader p {
+  color: #264765;
+  font-family: 'Geologica', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 60ch;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.cta,
+.secondaryCta {
+  border-radius: 999px;
+  display: inline-flex;
+  font-family: 'Geologica', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.cta {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background:
+    linear-gradient(180deg, rgba(55, 165, 255, 0.95), rgba(24, 144, 255, 0.88));
+  box-shadow: 0 10px 20px rgba(24, 144, 255, 0.16);
+  color: #e6f7ff;
+}
+
+.secondaryCta {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(198, 232, 255, 0.28));
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  color: #1890ff;
+}
+
+.section {
+  margin-top: 56px;
+}
+
+.sectionHeader {
+  margin-bottom: 24px;
+}
+
+.sectionHeader h1 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 10px;
+}
+
+.cardGrid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.socialGrid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (max-width: 860px) {
+  .page {
+    padding: 32px 14px 140px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 28px 22px;
+  }
+
+  .cardGrid,
+  .socialGrid {
+    gap: 18px;
+  }
+}

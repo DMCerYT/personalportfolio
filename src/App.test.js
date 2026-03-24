@@ -1,8 +1,16 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock(
+  'react-router-dom',
+  () => ({
+    Link: ({ children, to }) => <a href={to}>{children}</a>,
+  }),
+  { virtual: true }
+);
+
+import Home from './pages/Home';
+
+test('renders home call to action', () => {
+  render(<Home />);
+  expect(screen.getByText(/view projects/i)).toBeInTheDocument();
 });

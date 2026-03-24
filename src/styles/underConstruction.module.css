@@ -1,0 +1,28 @@
+.wrapper {
+  align-items: center;
+  background: rgba(230, 247, 255, 0.88);
+  border: 1px solid rgba(24, 144, 255, 0.18);
+  border-radius: 32px;
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.video {
+  border-radius: 24px;
+  display: block;
+  height: min(320px, 48vw);
+  object-fit: cover;
+  width: min(320px, 100%);
+}
+
+.wrapper p {
+  color: #264765;
+  font-family: 'Geologica', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  margin: 0;
+}
