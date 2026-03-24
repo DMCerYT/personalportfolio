@@ -1,4 +1,4 @@
-import logo from '../assets/avatarlogo.jpeg';
+import logo from '../assets/navbar-icons/avatarlogo.jpeg';
 import capybara from '../images/cute-cartoon-capybara-cap-sunglasses-600nw-2575177821.jpg.webp';
 
 export const projects = [

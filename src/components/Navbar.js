@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/avatarlogo.jpeg';
+import logo from '../assets/navbar-icons/avatarlogo.jpeg';
+import homeIcon from '../assets/navbar-icons/home.svg';
+import projectsIcon from '../assets/navbar-icons/projects.svg';
+import contactIcon from '../assets/navbar-icons/contact.svg';
+import menuIcon from '../assets/navbar-icons/menu.svg';
 import NavbarButton from './NavbarButton';
 import styles from '../styles/navbar.module.css';
 
 const ICONS = {
-  home: 'https://www.figma.com/api/mcp/asset/02a37963-5d82-482d-a085-b3a450ccf42a',
-  projects: 'https://www.figma.com/api/mcp/asset/d4844a7c-0a80-4d08-bc39-7a9fa77a2eab',
-  contact: 'https://www.figma.com/api/mcp/asset/43676bb9-d500-4771-ab68-ef989a243fbf',
-  menu: 'https://www.figma.com/api/mcp/asset/d9092adf-5b08-4f5a-8147-970c4eb33f03',
+  home: homeIcon,
+  projects: projectsIcon,
+  contact: contactIcon,
+  menu: menuIcon,
 };
 
 const NAV_ITEMS = [
