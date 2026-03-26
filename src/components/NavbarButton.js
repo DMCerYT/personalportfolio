@@ -1,23 +1,23 @@
-import {
-    Link
-} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import styles from '../styles/navbarButton.module.css';
 
 export default function NavbarButton({
-    link,
-    color,
-    text,
-    icon, 
+  link,
+  text,
+  icon,
+  mobile = false,
+  onNavigate,
 }) {
+  const className = mobile ? styles.mobileButton : styles.button;
 
-    let buttonStyle = styles.button;
-
-    return (
-        <Link to={ link }>
-            <div className={ buttonStyle }>
-                <span className="text">{text}</span>
-                <span className="icon">{icon}</span>
-            </div>
-        </Link>
-    );
+  return (
+    <NavLink
+      to={link}
+      className={({ isActive }) => `${className} ${isActive ? styles.active : ''}`.trim()}
+      onClick={onNavigate}
+    >
+      <img className={styles.icon} src={icon} alt="" aria-hidden="true" />
+      <span className={styles.text}>{text}</span>
+    </NavLink>
+  );
 }

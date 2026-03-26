@@ -1,0 +1,130 @@
+.hero {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.56), rgba(174, 221, 255, 0.28)),
+    linear-gradient(135deg, rgba(0, 134, 244, 0.12), rgba(102, 129, 249, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  border-radius: 40px;
+  box-shadow:
+    0 22px 44px rgba(24, 144, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.52);
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  padding: 28px;
+}
+
+.image {
+  border-radius: 24px;
+  display: block;
+  height: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.copy h1 {
+  color: #1890ff;
+  font-family: 'Geologica', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin: 0 0 18px;
+}
+
+.eyebrow,
+.summary,
+.panel li,
+.skillChip {
+  font-family: 'Geologica', sans-serif;
+}
+
+.eyebrow {
+  color: #5d7fa3;
+  letter-spacing: 0.14em;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.summary {
+  color: #264765;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 60ch;
+}
+
+.actions {
+  margin-top: 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 32px;
+}
+
+.panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(225, 242, 255, 0.5));
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 28px;
+  box-shadow:
+    0 16px 30px rgba(24, 144, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.54);
+  padding: 28px;
+}
+
+.panel h2 {
+  color: #1890ff;
+  font-family: 'Geologica', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+.panel ul {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.panel li {
+  color: #264765;
+  line-height: 1.55;
+}
+
+.skillWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skillChip {
+  background: rgba(24, 144, 255, 0.12);
+  border: 1px solid rgba(24, 144, 255, 0.16);
+  border-radius: 999px;
+  color: #156dbf;
+  padding: 10px 14px;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullWidth {
+    grid-column: auto;
+  }
+}

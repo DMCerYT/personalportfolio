@@ -1,0 +1,141 @@
+.card {
+  width: 100%;
+}
+
+.link {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.glass {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(124, 174, 221, 0.16)),
+    rgba(49, 98, 154, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 37px;
+  box-shadow:
+    0 16px 32px rgba(41, 90, 136, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.44);
+  padding: 28px;
+}
+
+.panel {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(173, 213, 244, 0.96), rgba(123, 161, 197, 0.94));
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34);
+  display: grid;
+  gap: 14px;
+  padding: 11px;
+  grid-template-rows: auto auto auto;
+}
+
+.image {
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.titleCard,
+.descriptionCard {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.72));
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.titleCard {
+  min-height: 84px;
+  padding: 12px 16px;
+}
+
+.titleCard h2 {
+  font-family: 'Geologica', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.descriptionCard {
+  min-height: 126px;
+  padding: 16px 14px;
+}
+
+.desktopDescription {
+  display: -webkit-box;
+  font-family: 'Geologica', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+  margin: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.mobileCta {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .glass {
+    border-radius: 20px;
+    padding: 8px 9px;
+  }
+
+  .panel {
+    gap: 0;
+    grid-template-columns: 134px 1fr;
+    grid-template-rows: 84px 41px;
+    padding: 7px 8px;
+  }
+
+  .image {
+    grid-row: 1 / span 2;
+    aspect-ratio: 1 / 1;
+    height: 134px;
+    width: 134px;
+  }
+
+  .titleCard {
+    align-self: start;
+    min-height: 84px;
+    padding: 10px 12px;
+  }
+
+  .titleCard h2 {
+    font-size: 1.5rem;
+  }
+
+  .descriptionCard {
+    align-self: end;
+    background:
+      linear-gradient(180deg, rgba(16, 106, 191, 0.9), rgba(0, 78, 151, 0.88));
+    border-color: rgba(198, 228, 255, 0.26);
+    color: #ffffff;
+    min-height: 41px;
+    padding: 8px 12px;
+  }
+
+  .desktopDescription {
+    display: none;
+  }
+
+  .mobileCta {
+    display: inline;
+    font-family: 'Geologica', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+  }
+}

@@ -1,0 +1,82 @@
+.background {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+}
+
+.gradientOrbOne,
+.gradientOrbTwo,
+.gridGlow {
+  filter: blur(12px);
+  position: absolute;
+}
+
+.gradientOrbOne {
+  background: radial-gradient(circle, rgba(24, 144, 255, 0.22), rgba(24, 144, 255, 0));
+  border-radius: 999px;
+  height: 40vw;
+  left: -10vw;
+  min-height: 280px;
+  min-width: 280px;
+  top: -8vw;
+  width: 40vw;
+}
+
+.gradientOrbTwo {
+  background: radial-gradient(circle, rgba(102, 129, 249, 0.16), rgba(102, 129, 249, 0));
+  border-radius: 999px;
+  bottom: -14vw;
+  height: 36vw;
+  min-height: 260px;
+  min-width: 260px;
+  right: -8vw;
+  width: 36vw;
+}
+
+.gridGlow {
+  background-image:
+    linear-gradient(rgba(24, 144, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 144, 255, 0.04) 1px, transparent 1px);
+  background-position: center;
+  background-size: 48px 48px;
+  inset: 0;
+  opacity: 0.45;
+}
+
+.dot {
+  animation: drift ease-in-out infinite;
+  background: radial-gradient(circle at 30% 30%, rgba(230, 247, 255, 0.95), rgba(24, 144, 255, 0.35));
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 8px 18px rgba(24, 144, 255, 0.12);
+  position: absolute;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.92);
+  }
+
+  35% {
+    transform: translate3d(22px, -30px, 0) scale(1);
+  }
+
+  65% {
+    transform: translate3d(-16px, -54px, 0) scale(1.08);
+  }
+
+  100% {
+    transform: translate3d(0, -78px, 0) scale(0.94);
+  }
+}
+
+@media (max-width: 860px) {
+  .gridGlow {
+    background-size: 36px 36px;
+    opacity: 0.3;
+  }
+}
