@@ -1,4 +1,5 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
+import DetailPanel from '../components/DetailPanel';
 import { getProjectBySlug } from '../data/projects';
 import pageStyles from '../styles/pageLayout.module.css';
 import detailStyles from '../styles/projectDetail.module.css';
@@ -14,7 +15,7 @@ export default function ProjectDetail() {
   return (
     <main className={pageStyles.page}>
       <section className={detailStyles.hero}>
-        <img className={detailStyles.image} src={project.image} alt="" />
+        <img className={detailStyles.image} src={project.image} alt={project.imageAlt} />
         <div className={detailStyles.copy}>
           <p className={detailStyles.eyebrow}>Project Breakdown</p>
           <h1>{project.title}</h1>
@@ -23,22 +24,39 @@ export default function ProjectDetail() {
             <Link className={pageStyles.cta} to="/projects">
               Back to Projects
             </Link>
+            {project.links.map((link) => {
+              const isInternalLink = link.href.startsWith('/');
+
+              return isInternalLink ? (
+                <Link key={link.href} className={pageStyles.secondaryCta} to={link.href}>
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  className={pageStyles.secondaryCta}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
 
       <section className={detailStyles.grid}>
-        <article className={detailStyles.panel}>
-          <h2>Process</h2>
+        <DetailPanel title="Process">
           <ul>
             {project.process.map((step) => (
               <li key={step}>{step}</li>
             ))}
           </ul>
-        </article>
+        </DetailPanel>
 
-        <article className={detailStyles.panel}>
-          <h2>Skills</h2>
+        <DetailPanel title="Skills">
           <div className={detailStyles.skillWrap}>
             {project.skills.map((skill) => (
               <span key={skill} className={detailStyles.skillChip}>
@@ -46,16 +64,45 @@ export default function ProjectDetail() {
               </span>
             ))}
           </div>
-        </article>
+        </DetailPanel>
 
-        <article className={`${detailStyles.panel} ${detailStyles.fullWidth}`}>
-          <h2>Outcomes</h2>
+        <DetailPanel title="Outcomes" fullWidth>
           <ul>
             {project.outcomes.map((outcome) => (
               <li key={outcome}>{outcome}</li>
             ))}
           </ul>
-        </article>
+        </DetailPanel>
+
+        {project.links.length > 0 ? (
+          <DetailPanel title="Links" fullWidth>
+            <div className={detailStyles.linkList}>
+              {project.links.map((link) => {
+                const isInternalLink = link.href.startsWith('/');
+
+                return isInternalLink ? (
+                  <Link
+                    key={`${project.slug}-${link.href}`}
+                    className={detailStyles.resourceLink}
+                    to={link.href}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={`${project.slug}-${link.href}`}
+                    className={detailStyles.resourceLink}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
+            </div>
+          </DetailPanel>
+        ) : null}
       </section>
     </main>
   );

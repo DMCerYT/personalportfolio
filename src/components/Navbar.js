@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/navbar-icons/avatarlogo.jpeg';
 import homeIcon from '../assets/navbar-icons/home.svg';
 import projectsIcon from '../assets/navbar-icons/projects.svg';
 import contactIcon from '../assets/navbar-icons/contact.svg';
 import menuIcon from '../assets/navbar-icons/menu.svg';
+import { siteAssets } from '../data/siteAssets';
 import NavbarButton from './NavbarButton';
 import styles from '../styles/navbar.module.css';
 
@@ -24,7 +24,7 @@ const NAV_ITEMS = [
 function NavbarLogo() {
   return (
     <Link className={styles.logoLink} to="/" aria-label="Go to home page">
-      <img className={styles.logo} src={logo} alt="Portfolio logo" />
+      <img className={styles.logo} src={siteAssets.avatarLogo} alt="Portfolio logo" />
     </Link>
   );
 }

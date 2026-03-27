@@ -1,41 +1,40 @@
-import logo from '../assets/navbar-icons/avatarlogo.jpeg';
-import capybara from '../images/cute-cartoon-capybara-cap-sunglasses-600nw-2575177821.jpg.webp';
+import { siteAssets } from './siteAssets';
 
 export const socialLinks = [
   {
     name: 'GitHub',
     handle: '@DMCer',
-    image: logo,
+    image: siteAssets.avatarLogo,
     href: 'https://github.com/',
   },
   {
     name: 'LinkedIn',
     handle: '@Emmanuel Munoz',
-    image: capybara,
+    image: siteAssets.capybaraIllustration,
     href: 'https://www.linkedin.com/',
   },
   {
     name: 'Email',
     handle: 'emunoz31@gatech.edu',
-    image: logo,
+    image: siteAssets.avatarLogo,
     href: 'mailto:emunoz31@gatech.edu',
   },
   {
     name: 'Resume',
     handle: 'Request a copy',
-    image: capybara,
+    image: siteAssets.capybaraIllustration,
     href: 'mailto:emunoz31@gatech.edu?subject=Resume%20Request',
   },
   {
     name: 'Instagram',
     handle: '@dmcer',
-    image: logo,
+    image: siteAssets.avatarLogo,
     href: 'https://www.instagram.com/',
   },
   {
     name: 'Discord',
     handle: '@dmcer',
-    image: capybara,
+    image: siteAssets.capybaraIllustration,
     href: 'https://discord.com/',
   },
 ];

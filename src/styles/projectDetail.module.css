@@ -102,6 +102,22 @@
   gap: 12px;
 }
 
+.linkList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.resourceLink {
+  background: rgba(24, 144, 255, 0.12);
+  border: 1px solid rgba(24, 144, 255, 0.16);
+  border-radius: 999px;
+  color: #156dbf;
+  font-family: 'Geologica', sans-serif;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
 .skillChip {
   background: rgba(24, 144, 255, 0.12);
   border: 1px solid rgba(24, 144, 255, 0.16);

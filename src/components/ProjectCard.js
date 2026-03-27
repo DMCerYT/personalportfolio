@@ -5,6 +5,7 @@ export default function ProjectCard({
   title,
   description,
   image,
+  imageAlt = '',
   to,
   href,
   cta = 'Read More',
@@ -13,7 +14,7 @@ export default function ProjectCard({
     <>
       <div className={styles.glass}>
         <div className={styles.panel}>
-          <img className={styles.image} src={image} alt="" />
+          <img className={styles.image} src={image} alt={imageAlt} />
           <div className={styles.titleCard}>
             <h2>{title}</h2>
           </div>
