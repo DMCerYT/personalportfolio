@@ -21,6 +21,7 @@
   max-height: 360px;
   object-fit: cover;
   width: 100%;
+  image-rendering: crisp-edges;
 }
 
 .copy h1 {

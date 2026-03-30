@@ -72,8 +72,8 @@ export const projects = [
     slug: 'focus-farmer',
     title: 'Focus Farmer',
     summary: 'A pomodoro-styled app designed to improve focus and study habits',
-    image: siteAssets.capybaraIllustration,
-    imageAlt: 'Capybara illustration used as the campus builder toolkit cover',
+    image: siteAssets.focusFarmerLogo,
+    imageAlt: 'Focus Farmer logo used as the project cover',
     featured: true,
     skills: ['Frontend architecture', 'DX systems', 'UI patterns', 'Documentation'],
     process: [
@@ -91,8 +91,8 @@ export const projects = [
     slug: 'money-mentor',
     title: 'Money Mentor',
     summary: 'A playground for trying out motion, layered UI, and novel navigation patterns before they reach production.',
-    image: siteAssets.avatarLogo,
-    imageAlt: 'Avatar logo used as the interaction sandbox project cover',
+    image: siteAssets.moneyMentorLogo,
+    imageAlt: 'Money Mentor logo used as the interaction sandbox project cover',
     skills: ['Prototyping', 'Animation systems', 'Interaction design', 'Accessibility'],
     process: [
       'Used small isolated experiments to validate unusual UX directions.',
@@ -109,8 +109,8 @@ export const projects = [
     slug: 'coffee-bean-recommender',
     title: 'BeanI',
     summary: 'Exploring lightweight automations for repetitive engineering tasks, project updates, and content workflows.',
-    image: siteAssets.capybaraIllustration,
-    imageAlt: 'Capybara illustration used as the automation lab project cover',
+    image: siteAssets.beanILogo,
+    imageAlt: 'BeanI logo used as the automation lab project cover',
     skills: ['Automation design', 'Developer productivity', 'Workflow mapping', 'Prompt systems'],
     process: [
       'Cataloged recurring tasks that cost time but required little judgment.',

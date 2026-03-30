@@ -37,8 +37,9 @@
   border-radius: 10px;
   display: block;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
+  image-rendering: crisp-edges;
 }
 
 .titleCard,
@@ -106,6 +107,7 @@
     aspect-ratio: 1 / 1;
     height: 134px;
     width: 134px;
+    image-rendering: crisp-edges;
   }
 
   .titleCard {
