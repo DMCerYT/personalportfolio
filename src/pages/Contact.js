@@ -8,7 +8,7 @@ export default function Contact() {
     <main className={styles.page}>
       <ContentSection
         title="Contact"
-        description="These links now share the same bundled asset source as the rest of the app, which keeps deployment-safe image handling consistent."
+        description="These are some of the platforms where you can find me. Whether you want to see more of my work, connect professionally, or just say hi, feel free to reach out through any of these mediums. I'm always open to chat!"
       >
         <div className={styles.socialGrid}>
           {socialLinks.map((link) => (
