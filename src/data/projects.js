@@ -47,13 +47,13 @@ export const projectEntrySteps = [
 
 export const projects = [
   createProject({
-    slug: 'portfolio-refresh',
-    title: 'Portfolio Refresh',
-    summary: 'Rebuilding this portfolio into a polished, responsive experience with Figma-driven styling.',
-    image: siteAssets.avatarLogo,
-    imageAlt: 'Avatar logo used as the portfolio refresh project cover',
+    slug: 'atlanta-taste-trek',
+    title: 'Atlanta Taste Trek',
+    summary: 'A full-stack restaurant discovery app built with Django, Figma-designed UI, and integration with Google Maps API for location-based search and reviews.',
+    image: siteAssets.atlantaTasteTrekLogo,
+    imageAlt: 'Atlanta Taste Trek logo used as the project cover',
     featured: true,
-    skills: ['React', 'Responsive UI', 'Figma translation', 'CSS modules'],
+    skills: ['Django', 'Responsive UI', 'Figma Design + Implementation', 'CSS modules'],
     process: [
       'Mapped the Figma component library into reusable React components.',
       'Converted the navbar, project cards, and contact cards into responsive shared UI.',
@@ -69,9 +69,9 @@ export const projects = [
     ],
   }),
   createProject({
-    slug: 'campus-builder-toolkit',
-    title: 'Campus Builder Toolkit',
-    summary: 'A starter kit for launching student-facing tools with authentication, dashboards, and admin flows.',
+    slug: 'focus-farmer',
+    title: 'Focus Farmer',
+    summary: 'A pomodoro-styled app designed to improve focus and study habits',
     image: siteAssets.capybaraIllustration,
     imageAlt: 'Capybara illustration used as the campus builder toolkit cover',
     featured: true,
@@ -88,8 +88,8 @@ export const projects = [
     ],
   }),
   createProject({
-    slug: 'interaction-sandbox',
-    title: 'Interaction Sandbox',
+    slug: 'money-mentor',
+    title: 'Money Mentor',
     summary: 'A playground for trying out motion, layered UI, and novel navigation patterns before they reach production.',
     image: siteAssets.avatarLogo,
     imageAlt: 'Avatar logo used as the interaction sandbox project cover',
@@ -106,8 +106,8 @@ export const projects = [
     ],
   }),
   createProject({
-    slug: 'automation-lab',
-    title: 'Automation Lab',
+    slug: 'coffee-bean-recommender',
+    title: 'BeanI',
     summary: 'Exploring lightweight automations for repetitive engineering tasks, project updates, and content workflows.',
     image: siteAssets.capybaraIllustration,
     imageAlt: 'Capybara illustration used as the automation lab project cover',

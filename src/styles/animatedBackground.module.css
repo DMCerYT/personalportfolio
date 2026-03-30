@@ -1,4 +1,5 @@
 .background {
+  contain: paint;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
@@ -6,11 +7,11 @@
   z-index: 0;
 }
 
-.gradientOrbOne,
-.gradientOrbTwo,
+.gradientOrb,
 .gridGlow {
   filter: blur(12px);
   position: absolute;
+  will-change: transform;
 }
 
 .gradientOrbOne {
@@ -54,6 +55,26 @@
     0 0 0 1px rgba(255, 255, 255, 0.08) inset,
     0 8px 18px rgba(24, 144, 255, 0.12);
   position: absolute;
+  will-change: transform, opacity;
+}
+
+.performanceBackground {
+  opacity: 0.82;
+}
+
+.performanceOrb {
+  filter: blur(6px);
+}
+
+.performanceGridGlow {
+  filter: none;
+  opacity: 0.18;
+}
+
+.performanceDot {
+  animation-duration: 16s;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  opacity: 0.75;
 }
 
 @keyframes drift {
@@ -78,5 +99,12 @@
   .gridGlow {
     background-size: 36px 36px;
     opacity: 0.3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot,
+  .performanceDot {
+    animation: none;
   }
 }

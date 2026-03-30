@@ -1,6 +1,6 @@
 import styles from '../styles/animatedBackground.module.css';
 
-const DOTS = [
+const FULL_DOTS = [
   { top: '10%', left: '8%', size: '10px', delay: '0s', duration: '12s' },
   { top: '18%', left: '28%', size: '16px', delay: '1.5s', duration: '15s' },
   { top: '12%', left: '66%', size: '12px', delay: '0.8s', duration: '13s' },
@@ -15,16 +15,32 @@ const DOTS = [
   { top: '86%', left: '46%', size: '12px', delay: '1.3s', duration: '12s' },
 ];
 
-export default function AnimatedBackground() {
+const LITE_DOTS = FULL_DOTS.slice(0, 6);
+
+export default function AnimatedBackground({ performanceMode = false }) {
+  const dots = performanceMode ? LITE_DOTS : FULL_DOTS;
+  const orbClassName = performanceMode
+    ? `${styles.gradientOrb} ${styles.performanceOrb}`
+    : styles.gradientOrb;
+  const gridGlowClassName = performanceMode
+    ? `${styles.gridGlow} ${styles.performanceGridGlow}`
+    : styles.gridGlow;
+  const dotClassName = performanceMode
+    ? `${styles.dot} ${styles.performanceDot}`
+    : styles.dot;
+
   return (
-    <div className={styles.background} aria-hidden="true">
-      <div className={styles.gradientOrbOne} />
-      <div className={styles.gradientOrbTwo} />
-      <div className={styles.gridGlow} />
-      {DOTS.map((dot, index) => (
+    <div
+      className={`${styles.background} ${performanceMode ? styles.performanceBackground : ''}`.trim()}
+      aria-hidden="true"
+    >
+      <div className={`${orbClassName} ${styles.gradientOrbOne}`.trim()} />
+      <div className={`${orbClassName} ${styles.gradientOrbTwo}`.trim()} />
+      <div className={gridGlowClassName} />
+      {dots.map((dot, index) => (
         <span
           key={`${dot.top}-${dot.left}-${index}`}
-          className={styles.dot}
+          className={dotClassName}
           style={{
             top: dot.top,
             left: dot.left,

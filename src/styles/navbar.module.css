@@ -14,8 +14,6 @@
 
 .desktopNavbar {
   align-items: center;
-  backdrop-filter: blur(26px) saturate(145%);
-  -webkit-backdrop-filter: blur(26px) saturate(145%);
   background:
     linear-gradient(135deg, rgba(240, 250, 255, 0.9), rgba(201, 230, 250, 0.78)),
     rgba(0, 134, 244, 0.22);
@@ -39,6 +37,11 @@
   z-index: 1000;
 }
 
+:global(body[data-performance-mode='standard']) .desktopNavbar {
+  backdrop-filter: blur(26px) saturate(145%);
+  -webkit-backdrop-filter: blur(26px) saturate(145%);
+}
+
 .desktopNavbar::before {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0));
   content: '';
@@ -52,6 +55,34 @@
   display: flex;
   gap: 19px;
   margin-left: 22px;
+}
+
+.floatingSettingsDock {
+  bottom: 28px;
+  left: 24px;
+  position: fixed;
+  z-index: 9999;
+}
+
+.floatingSettingsTrigger {
+  opacity: 0.72;
+  transform: translateY(0);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.floatingSettingsTrigger:hover,
+.floatingSettingsTrigger:focus-visible {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.floatingSettingsPanel {
+  animation: settingsFadeIn 220ms ease forwards;
+  bottom: 120px;
+  left: 24px;
+  position: fixed;
+  transform-origin: bottom left;
+  z-index: 9999;
 }
 
 .logoLink {
@@ -83,8 +114,6 @@
 
 .mobileNavbar {
   align-items: center;
-  backdrop-filter: blur(26px) saturate(145%);
-  -webkit-backdrop-filter: blur(26px) saturate(145%);
   background:
     linear-gradient(90deg, rgba(240, 250, 255, 0.92), rgba(195, 226, 249, 0.78)),
     linear-gradient(90deg, rgba(0, 54, 98, 0.2), rgba(0, 134, 244, 0.2));
@@ -106,6 +135,11 @@
   z-index: 1000;
 }
 
+:global(body[data-performance-mode='standard']) .mobileNavbar {
+  backdrop-filter: blur(26px) saturate(145%);
+  -webkit-backdrop-filter: blur(26px) saturate(145%);
+}
+
 .mobileMenu {
   align-items: flex-end;
   bottom: 96px;
@@ -121,6 +155,15 @@
   width: min(366px, calc(100vw - 28px));
   will-change: opacity, transform;
   z-index: 1001;
+}
+
+.mobileSettingsPanel {
+  bottom: 0px;
+  left: 50%;
+  position: fixed;
+  transform: translateX(-50%);
+  width: min(366px, calc(100vw - 28px));
+  z-index: 1002;
 }
 
 .mobileMenuEnter {
@@ -179,8 +222,24 @@
   }
 }
 
+@keyframes settingsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @media (max-width: 860px) {
   .desktopHeader {
+    display: none;
+  }
+
+  .floatingSettingsDock {
     display: none;
   }
 

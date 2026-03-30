@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import homeIcon from '../assets/navbar-icons/home.svg';
 import projectsIcon from '../assets/navbar-icons/projects.svg';
 import contactIcon from '../assets/navbar-icons/contact.svg';
 import menuIcon from '../assets/navbar-icons/menu.svg';
+import settingsIcon from '../assets/navbar-icons/Setting.svg';
 import { siteAssets } from '../data/siteAssets';
 import NavbarButton from './NavbarButton';
+import SettingsPanel from './SettingsPanel';
 import styles from '../styles/navbar.module.css';
 
 const ICONS = {
@@ -29,8 +31,14 @@ function NavbarLogo() {
   );
 }
 
-export default function NavigationBar() {
+export default function NavigationBar({
+  settings,
+  onToggleDynamicBackground,
+}) {
   const [menuState, setMenuState] = useState('closed');
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const desktopSettingsRef = useRef(null);
+  const mobileSettingsRef = useRef(null);
 
   const isMenuMounted = menuState !== 'closed';
   const isMenuOpen = menuState === 'open';
@@ -46,6 +54,35 @@ export default function NavigationBar() {
 
     return () => window.clearTimeout(timeoutId);
   }, [menuState]);
+
+  useEffect(() => {
+    if (!isSettingsOpen) {
+      return undefined;
+    }
+
+    const handlePointerDown = (event) => {
+      const clickedDesktopSettings = desktopSettingsRef.current?.contains(event.target);
+      const clickedMobileSettings = mobileSettingsRef.current?.contains(event.target);
+
+      if (!clickedDesktopSettings && !clickedMobileSettings) {
+        setIsSettingsOpen(false);
+      }
+    };
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setIsSettingsOpen(false);
+      }
+    };
+
+    window.addEventListener('mousedown', handlePointerDown);
+    window.addEventListener('keydown', handleEscape);
+
+    return () => {
+      window.removeEventListener('mousedown', handlePointerDown);
+      window.removeEventListener('keydown', handleEscape);
+    };
+  }, [isSettingsOpen]);
 
   const openMenu = () => {
     setMenuState('open');
@@ -67,7 +104,21 @@ export default function NavigationBar() {
       return;
     }
 
+    closeSettings();
     openMenu();
+  };
+
+  const toggleSettings = () => {
+    setIsSettingsOpen((currentState) => !currentState);
+  };
+
+  const closeSettings = () => {
+    setIsSettingsOpen(false);
+  };
+
+  const handleMobileSettingsClick = () => {
+    closeMenu();
+    setIsSettingsOpen(true);
   };
 
   return (
@@ -89,6 +140,27 @@ export default function NavigationBar() {
         </div>
       </header>
 
+      <div ref={desktopSettingsRef} className={styles.floatingSettingsDock}>
+        <NavbarButton
+          icon={settingsIcon}
+          text="Settings"
+          iconOnly
+          active={isSettingsOpen}
+          buttonLabel="Open settings"
+          onClick={toggleSettings}
+          extraClassName={styles.floatingSettingsTrigger}
+        />
+        {isSettingsOpen ? (
+          <div className={styles.floatingSettingsPanel}>
+            <SettingsPanel
+              settings={settings}
+              onToggleBackground={onToggleDynamicBackground}
+              onClose={closeSettings}
+            />
+          </div>
+        ) : null}
+      </div>
+
       <div className={styles.mobileNavWrap}>
         {isMenuMounted ? (
           <nav
@@ -107,6 +179,14 @@ export default function NavigationBar() {
                 onNavigate={closeMenu}
               />
             ))}
+            <NavbarButton
+              icon={settingsIcon}
+              text="Settings"
+              mobile
+              active={isSettingsOpen}
+              buttonLabel="Open settings"
+              onClick={handleMobileSettingsClick}
+            />
           </nav>
         ) : null}
 
@@ -122,6 +202,16 @@ export default function NavigationBar() {
             <img src={ICONS.menu} alt="" aria-hidden="true" />
           </button>
         </div>
+
+        {isSettingsOpen ? (
+          <div ref={mobileSettingsRef} className={styles.mobileSettingsPanel}>
+            <SettingsPanel
+              settings={settings}
+              onToggleBackground={onToggleDynamicBackground}
+              onClose={closeSettings}
+            />
+          </div>
+        ) : null}
       </div>
     </>
   );
