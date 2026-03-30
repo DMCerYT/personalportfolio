@@ -29,7 +29,7 @@ export const socialLinks = [
     name: 'Instagram',
     handle: '@dmcer',
     image: siteAssets.avatarLogo,
-    href: 'https://www.instagram.com/',
+    href: 'https://www.instagram.com/official_dmcer/',
   },
   {
     name: 'Discord',
