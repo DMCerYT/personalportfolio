@@ -5,13 +5,13 @@ export const socialLinks = [
     name: 'GitHub',
     handle: '@DMCer',
     image: siteAssets.avatarLogo,
-    href: 'https://github.com/',
+    href: 'https://github.com/DMCerYT',
   },
   {
     name: 'LinkedIn',
     handle: '@Emmanuel Munoz',
     image: siteAssets.capybaraIllustration,
-    href: 'https://www.linkedin.com/',
+    href: 'https://www.linkedin.com/in/emmanuel-dmcer/',
   },
   {
     name: 'Email',
