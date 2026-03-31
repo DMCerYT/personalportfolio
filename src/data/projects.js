@@ -133,7 +133,7 @@ export const projects = [
     ],
     links: [
       { label: 'GitHub Repository', href: 'https://github.com/okBrian/CoffeeBeanRecommender' }, 
-      { label: 'Figma Design File', href: 'https://youtu.be/1nqj8j3XoWE' },
+      { label: 'Figma Design File', href: 'https://www.figma.com/design/73gFUXWkCaH94bav4nkjc9/Coffee-Bean-Recommender?node-id=0-1&t=BPnM2BT0TmAhMyv3-1' },
       { label: 'DevPost Page', href: 'https://devpost.com/software/beani?_gl=1*12qd6kx*_gcl_au*MjY3ODUwOTgwLjE3NzQ5ODgyODE.*_ga*MTUyNzA2MDIwMi4xNzc0OTg4Mjgx*_ga_0YHJK3Y10M*czE3NzQ5ODgyODAkbzEkZzEkdDE3NzQ5ODg1NTUkajQzJGwwJGgw' },
       { label: 'Demo Video', href: 'https://youtu.be/Gte54Mib1-w' },
     ]
