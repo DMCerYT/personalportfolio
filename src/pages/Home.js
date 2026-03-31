@@ -41,7 +41,7 @@ export default function Home() {
 
       <ContentSection
         title="Highlighted Projects"
-        description="Homepage highlights are now driven by the project data model. Mark a project as featured and it appears here automatically."
+        description="These are some of the projects I have had a blast working on."
       >
         <FeaturedProjects projects={featuredProjects} />
       </ContentSection>

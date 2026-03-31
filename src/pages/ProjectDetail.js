@@ -3,6 +3,7 @@ import DetailPanel from '../components/DetailPanel';
 import { getProjectBySlug } from '../data/projects';
 import pageStyles from '../styles/pageLayout.module.css';
 import detailStyles from '../styles/projectDetail.module.css';
+// import UnderConstruction from '../components/UnderConstruction';
 
 export default function ProjectDetail() {
   const { slug } = useParams();

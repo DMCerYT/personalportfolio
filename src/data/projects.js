@@ -21,6 +21,7 @@ export const newProjectTemplate = Object.freeze({
   image: siteAssets.avatarLogo,
   imageAlt: 'A short description of the project image',
   featured: false,
+  isUnderConstruction: false, // This field can be used to indicate if the project is still a work in progress, which can help manage expectations when sharing incomplete projects.
   skills: ['React', 'Design Systems', 'Testing'],
   process: [
     'Describe the main implementation steps.',
@@ -75,6 +76,8 @@ export const projects = [
     image: siteAssets.focusFarmerLogo,
     imageAlt: 'Focus Farmer logo used as the project cover',
     featured: true,
+    isUnderConstruction: true,
+    isPageUnderConstruction: true,
     skills: ['Frontend architecture', 'DX systems', 'UI patterns', 'Documentation'],
     process: [
       'Defined a base set of flows that most internal campus tools needed.',
@@ -90,7 +93,7 @@ export const projects = [
   createProject({
     slug: 'money-mentor',
     title: 'Money Mentor',
-    summary: 'A playground for trying out motion, layered UI, and novel navigation patterns before they reach production.',
+    summary: 'A financial planning application designed to help college students better manage their finances as well as gain financial literacy.',
     image: siteAssets.moneyMentorLogo,
     imageAlt: 'Money Mentor logo used as the interaction sandbox project cover',
     skills: ['Prototyping', 'Animation systems', 'Interaction design', 'Accessibility'],
@@ -108,7 +111,7 @@ export const projects = [
   createProject({
     slug: 'coffee-bean-recommender',
     title: 'BeanI',
-    summary: 'Exploring lightweight automations for repetitive engineering tasks, project updates, and content workflows.',
+    summary: 'A fun coffee bean roast recommender that uses a lightweight OpenCV model to classify roast levels from photos of coffee beans as well as provide guidance for preparing coffee based on user preferences.',
     image: siteAssets.beanILogo,
     imageAlt: 'BeanI logo used as the automation lab project cover',
     skills: ['Automation design', 'Developer productivity', 'Workflow mapping', 'Prompt systems'],

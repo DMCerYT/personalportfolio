@@ -1,10 +1,12 @@
 import styles from '../styles/pageLayout.module.css';
+import UnderConstruction from './UnderConstruction';
 
 export default function ContentSection({
   title,
   description,
   children,
   className = '',
+  isPageUnderConstruction = false, // This prop can be used to conditionally render an "Under Construction" message or placeholder content if needed in the future
 }) {
   return (
     <section className={`${styles.section} ${className}`.trim()}>
@@ -15,6 +17,9 @@ export default function ContentSection({
         </div>
       ) : null}
       {children}
+      {isPageUnderConstruction ? (
+        <UnderConstruction />
+      ) : null}
     </section>
   );
 }

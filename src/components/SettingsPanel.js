@@ -41,7 +41,7 @@ export default function SettingsPanel({
       <div className={styles.settingsList}>
         <SettingRow
           label="Dynamic background"
-          description="Turn the animated background on or off without affecting the rest of the site."
+          description="Enable/Disable the animated background."
           control={(
             <label className={styles.toggle}>
               <input
@@ -58,7 +58,7 @@ export default function SettingsPanel({
 
         <SettingRow
           label="Dark mode"
-          description="Reserved for a future dark theme. The switch is visible now so the settings layout is ready."
+          description="Dark mode coming soon!"
           control={(
             <label className={`${styles.toggle} ${styles.disabledControl}`}>
               <input type="checkbox" disabled />
@@ -71,7 +71,7 @@ export default function SettingsPanel({
 
         <SettingRow
           label="Language"
-          description="Language switching will be added later. The menu is disabled for now."
+          description="Language options will be added in the future!"
           control={(
             <select className={styles.select} value="en" disabled aria-label="Language">
               <option value="en">English</option>
