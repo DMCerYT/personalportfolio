@@ -54,19 +54,20 @@ export const projects = [
     image: siteAssets.atlantaTasteTrekLogo,
     imageAlt: 'Atlanta Taste Trek logo used as the project cover',
     featured: true,
-    skills: ['Django', 'Responsive UI', 'Figma Design + Implementation', 'CSS modules'],
+    skills: ['Django', 'Responsive UI', 'Figma Design + Implementation', 'CSS modules', 'Google Maps API', 'Full-Stack Development', 'Frontend Architecture'],
     process: [
       'Mapped the Figma component library into reusable React components.',
-      'Converted the navbar, project cards, and contact cards into responsive shared UI.',
-      'Tested mobile and desktop layouts while tightening interaction behavior and layering.',
+      'Implemented the Figma Design Page manually instead of using automated tools to ensure consistency, readability, and maintainability of the front-end.',
+      'Refactored multiple front-end components for better performance and maintainability.',
+      'Actively contributed in the presentation materials for the project demo and final presentation to effectively communicate the project\'s value and technical achievements.',
     ],
     outcomes: [
-      'Created a cleaner design system for the site.',
-      'Established reusable project and contact card components.',
-      'Improved the portfolio foundation so new sections can be added faster.',
+      'Created a full-stack restaurant discovery app with location-based search and reviews.',
+      'Established a consistent design language across the application ensuring ease-of-use.',
+      'Designed for an international audience in mind, with extensive use of symbols and numbers.',
     ],
     links: [
-      { label: 'Project List', href: '/projects' },
+      { label: 'Figma Design File', href: '/projects' },
     ],
   }),
   createProject({
@@ -78,16 +79,21 @@ export const projects = [
     featured: true,
     isUnderConstruction: true,
     isPageUnderConstruction: true,
-    skills: ['Frontend architecture', 'DX systems', 'UI patterns', 'Documentation'],
+    skills: ['Frontend architecture', 'React', 'UI patterns', 'Psychological Research', 'Prototyping'],
     process: [
-      'Defined a base set of flows that most internal campus tools needed.',
-      'Built composable page shells, reusable cards, and opinionated setup docs.',
-      'Focused on shortening time-to-first-feature for new contributors.',
+      'Started off as a standalone web app, then adapted to work as a Chrome extension that embeds its components into the user\'s current page.',
+      'Created Sprites ',
+      'Focused on building interactive features to ',
     ],
     outcomes: [
-      'Reduced setup friction for new projects.',
-      'Standardized common interaction and layout patterns.',
-      'Made onboarding easier for collaborators with different skill levels.',
+      'A Pomodoro-styled app that improves focus and engagement by combining commitment and gamification techniques.',
+      'Acquired experience building a Chrome Extension with React and integrating it into existing web pages.',
+      'Implemented randomized AI music from ElevenLabs. (TechValley 2026 ElevenLabs Winners)',
+    ],
+    links: [
+      { label: 'GitHub Repository', href: 'https://github.com/DMCerYT/focus-farmer' },
+      { label: 'DevPost Page', href: 'https://devpost.com/software/locked-in-focus-farming?_gl=1*q9afyn*_gcl_au*MjY3ODUwOTgwLjE3NzQ5ODgyODE.*_ga*MTUyNzA2MDIwMi4xNzc0OTg4Mjgx*_ga_0YHJK3Y10M*czE3NzQ5ODgyODAkbzEkZzEkdDE3NzQ5ODgyODgkajUyJGwwJGgw' },
+      { label: 'Demo Video', href: 'https://youtu.be/RvEgfpBmBFs' }
     ],
   }),
   createProject({
@@ -116,7 +122,7 @@ export const projects = [
     imageAlt: 'BeanI logo used as the automation lab project cover',
     skills: ['Automation design', 'Developer productivity', 'Workflow mapping', 'Prompt systems'],
     process: [
-      'Cataloged recurring tasks that cost time but required little judgment.',
+      'Identified interaction flow and started off with wireframes.',
       'Designed lightweight prompts and handoff rules for those tasks.',
       'Focused on automations that produce usable intermediate output instead of black-box behavior.',
     ],
@@ -125,6 +131,12 @@ export const projects = [
       'Made work status easier to summarize consistently.',
       'Created a more repeatable way to manage recurring engineering chores.',
     ],
+    links: [
+      { label: 'GitHub Repository', href: 'https://github.com/okBrian/CoffeeBeanRecommender' }, 
+      { label: 'Figma Design File', href: 'https://youtu.be/1nqj8j3XoWE' },
+      { label: 'DevPost Page', href: 'https://devpost.com/software/beani?_gl=1*12qd6kx*_gcl_au*MjY3ODUwOTgwLjE3NzQ5ODgyODE.*_ga*MTUyNzA2MDIwMi4xNzc0OTg4Mjgx*_ga_0YHJK3Y10M*czE3NzQ5ODgyODAkbzEkZzEkdDE3NzQ5ODg1NTUkajQzJGwwJGgw' },
+      { label: 'Demo Video', href: 'https://youtu.be/Gte54Mib1-w' },
+    ]
   }),
 ];
 

@@ -84,6 +84,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gtlife" element={<Home />} /> 
           <Route path="/superdupertestpageletsgo" element={<TestPage />} />
         </Routes>
         <Navbar
