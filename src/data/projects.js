@@ -105,12 +105,19 @@ export const projects = [
     imageAlt: 'Money Mentor logo used as the interaction sandbox project cover',
     skills: ['Market Research', 'Storyboarding', 'Prototyping', 'User Research', 'Persona Creation', 'Figma'],
     process: [
-      '...',
+      'Identified Problem Space through market and user research by conducting 100+ surveys and 10+ one-on-one interviews with college students to understand their financial habits, challenges, and needs.',
+      'Performed an affinity diagram analsyis to identify key pain points and opportunities for intervention in college students\' financial management.',
+      'Created user personas and storyboards to visualize the user journey and identify critical opportunties for financial education and intervention.',
+      'Performed hierarchical task analysis to understand user goals, plans, and tasks related to financial management and identify areas where a financial planning application would be beneficial.',
+      'Brainstormed 10 prorotypes based on previous research insights to address problem space with two in the form of storyboards outlining specific scenarios.',
+      'Performed an indepth evaluation of the high-fidelity prototype with user story, testing 5 tasks with 5 participants to gather feedback on usability, design, and overall effectiveness of the application.',
     ],
     outcomes: [
       'Designed and Prototyped application design through Figma with 5 participants providing feedback',
       'Created an interface designed to assist college students to become more financially literate as well as responsible with budgeting and financial planning.',
       'Produced reusable components for various iterations.',
+      'Generated poster demonstrating the best solutions that address the identified problem space.',
+      'Adapted and applied feedback from user testing to improve the interaction design and feel of the application.',
     ],
   }),
   createProject({
