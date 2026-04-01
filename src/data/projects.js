@@ -101,6 +101,7 @@ export const projects = [
     title: 'Money Mentor',
     summary: 'A financial planning application designed to help college students better manage their finances as well as gain financial literacy.',
     image: siteAssets.moneyMentorLogo,
+    featured: true,
     imageAlt: 'Money Mentor logo used as the interaction sandbox project cover',
     skills: ['Market Research', 'Storyboarding', 'Prototyping', 'User Research', 'Persona Creation', 'Figma'],
     process: [
