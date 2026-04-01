@@ -102,16 +102,14 @@ export const projects = [
     summary: 'A financial planning application designed to help college students better manage their finances as well as gain financial literacy.',
     image: siteAssets.moneyMentorLogo,
     imageAlt: 'Money Mentor logo used as the interaction sandbox project cover',
-    skills: ['Prototyping', 'Animation systems', 'Interaction design', 'Accessibility'],
+    skills: ['Market Research', 'Storyboarding', 'Prototyping', 'User Research', 'Persona Creation', 'Figma'],
     process: [
-      'Used small isolated experiments to validate unusual UX directions.',
-      'Measured which animations improved clarity versus which ones created noise.',
-      'Adapted the successful patterns into production-friendly implementations.',
+      '...',
     ],
     outcomes: [
-      'Built confidence in interaction decisions before shipping.',
-      'Created a faster workflow for testing UI direction changes.',
-      'Produced reusable motion ideas for future projects.',
+      'Designed and Prototyped application design through Figma with 5 participants providing feedback',
+      'Created an interface designed to assist college students to become more financially literate as well as responsible with budgeting and financial planning.',
+      'Produced reusable components for various iterations.',
     ],
   }),
   createProject({
