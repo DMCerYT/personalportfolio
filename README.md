@@ -12,5 +12,3 @@ This portfolio is a React app with data-driven project entries and bundled local
 ## Adding a new project
 
 Project content lives in [src/data/projects.js](/Users/dmcer/webdev/portfolio/personalportfolio/src/data/projects.js). Duplicate the `newProjectTemplate` shape, fill in the content, and add the new object to the `projects` array.
-
-If you need a new image, import it through [src/data/siteAssets.js](/Users/dmcer/webdev/portfolio/personalportfolio/src/data/siteAssets.js) first. That keeps the asset inside the React build pipeline so it gets bundled correctly for deployment.

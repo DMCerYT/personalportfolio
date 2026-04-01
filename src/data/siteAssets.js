@@ -1,8 +1,12 @@
 import avatarLogo from '../assets/navbar-icons/avatarlogo.jpeg';
+// import avatarTwoLogo from '../assets/navbar-icons/avatarlogo2.jpeg';
+
+// Individual Project Assets
 import atlantaTasteTrekLogo from '../assets/project-assets/atlanta-taste-trek/atlanta_taste_trek_orange.png';
 import focusFarmerLogo from '../assets/project-assets/focus-farmer/focus_farmer_splash_title.png';
 import beanILogo from '../assets/project-assets/beani/beani_logo.svg';
 import moneyMentorLogo from '../assets/project-assets/money-mentor/Money_mentor_Logo.png';
+// Local Test Image
 import capybaraIllustration from '../images/cute-cartoon-capybara-cap-sunglasses-600nw-2575177821.jpg.webp';
 // Social Media Assets
 import facebookPositive from '../assets/social-assets/facebook_positive.svg';
@@ -20,10 +24,9 @@ import googleNegative from '../assets/social-assets/google_negative.svg';
 import twitterPositive from '../assets/social-assets/twitter_positive.svg';
 import twitterNegative from '../assets/social-assets/twitter_negative.svg';
 
-// Individual Project Assets
-
 export const siteAssets = {
   avatarLogo,
+  // Local Test Image
   capybaraIllustration,
   atlantaTasteTrekLogo,
   focusFarmerLogo,
