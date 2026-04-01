@@ -59,6 +59,117 @@
   margin-top: 24px;
 }
 
+.detailSectionList {
+  display: grid;
+  gap: 16px;
+}
+
+.detailSection {
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(24, 144, 255, 0.14);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.detailSectionSummary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  list-style: none;
+  padding: 22px 24px;
+}
+
+.detailSectionSummary::-webkit-details-marker {
+  display: none;
+}
+
+.detailSectionSummary h3,
+.detailSectionSummary p,
+.detailSectionToggle,
+.detailSectionBody p,
+.detailFigure figcaption {
+  font-family: 'Geologica', sans-serif;
+}
+
+.detailSectionSummary h3 {
+  color: #1890ff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0 0 6px;
+}
+
+.detailSectionSummary p {
+  color: #426380;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 62ch;
+}
+
+.detailSectionToggle {
+  background: rgba(24, 144, 255, 0.12);
+  border: 1px solid rgba(24, 144, 255, 0.16);
+  border-radius: 999px;
+  color: #156dbf;
+  flex-shrink: 0;
+  padding: 10px 14px;
+}
+
+.detailSection[open] .detailSectionToggle {
+  background: rgba(21, 109, 191, 0.16);
+}
+
+.detailSection[open] .detailSectionToggle::after {
+  content: ' Less';
+}
+
+.detailSection:not([open]) .detailSectionToggle::after {
+  content: ' More';
+}
+
+.detailSectionBody {
+  border-top: 1px solid rgba(24, 144, 255, 0.12);
+  display: grid;
+  gap: 20px;
+  padding: 0 24px 24px;
+}
+
+.detailParagraphs {
+  display: grid;
+  gap: 16px;
+}
+
+.detailSectionBody p {
+  color: #264765;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.detailImageGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.detailFigure {
+  margin: 0;
+}
+
+.detailImage {
+  border-radius: 20px;
+  display: block;
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.detailFigure figcaption {
+  color: #5d7fa3;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
 .grid {
   display: grid;
   gap: 24px;
@@ -135,6 +246,11 @@
   .hero {
     grid-template-columns: 1fr;
     padding: 22px;
+  }
+
+  .detailSectionSummary {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .grid {

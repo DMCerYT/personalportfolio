@@ -1,9 +1,10 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import DetailPanel from '../components/DetailPanel';
+import ProjectDetailSections from '../components/ProjectDetailSections';
+import UnderConstruction from '../components/UnderConstruction';
 import { getProjectBySlug } from '../data/projects';
 import pageStyles from '../styles/pageLayout.module.css';
 import detailStyles from '../styles/projectDetail.module.css';
-// import UnderConstruction from '../components/UnderConstruction';
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -47,6 +48,18 @@ export default function ProjectDetail() {
           </div>
         </div>
       </section>
+
+      {project.details.length > 0 ? (
+        <DetailPanel title="Project Details" fullWidth>
+          <ProjectDetailSections sections={project.details} />
+        </DetailPanel>
+      ) : null}
+
+      {project.isPageUnderConstruction ? (
+        <DetailPanel title="Status" fullWidth>
+          <UnderConstruction pageName={project.title} />
+        </DetailPanel>
+      ) : null}
 
       <section className={detailStyles.grid}>
         <DetailPanel title="Process">
