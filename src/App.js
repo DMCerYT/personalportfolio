@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
 import TestPage from './pages/Test';
+import NotFound from './components/NotFound';
 
 const DEFAULT_SETTINGS = {
   dynamicBackgroundEnabled: true,
@@ -86,6 +87,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/gtlife" element={<Home />} /> 
           <Route path="/superdupertestpageletsgo" element={<TestPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Navbar
           settings={settings}

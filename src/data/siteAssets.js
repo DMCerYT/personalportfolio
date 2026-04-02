@@ -23,6 +23,8 @@ import googlePositive from '../assets/social-assets/google_positive.svg';
 import googleNegative from '../assets/social-assets/google_negative.svg';
 import twitterPositive from '../assets/social-assets/twitter_positive.svg';
 import twitterNegative from '../assets/social-assets/twitter_negative.svg';
+// Under Construction Assets
+import catWorkVideo from '../assets/temp/underconstruction.mp4';
 
 export const siteAssets = {
   avatarLogo,
@@ -47,5 +49,7 @@ export const siteAssets = {
   instagramNegative,
   youtubeNegative,
   googleNegative,
-  twitterNegative
+  twitterNegative,
+  // Under Construction Assets
+  catWorkVideo,
 };

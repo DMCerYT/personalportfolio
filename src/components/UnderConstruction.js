@@ -1,4 +1,5 @@
-import catWork from '../assets/temp/underconstruction.mp4';
+
+import { siteAssets } from '../data/siteAssets';
 import styles from '../styles/underConstruction.module.css';
 
 export default function UnderConstruction({
@@ -7,9 +8,9 @@ export default function UnderConstruction({
   return (
     <div className={styles.wrapper}>
       <video className={styles.video} autoPlay loop playsInline muted>
-        <source src={catWork} type="video/mp4" />
+        <source src={siteAssets.catWorkVideo} type="video/mp4" />
       </video>
-      <p>{pageName} is under construction, but the rest of the portfolio components are live.</p>
+      <p>{pageName} is under construction. I sincerely apologize for the inconvenience while I am working on this page.</p>
     </div>
   );
 }
