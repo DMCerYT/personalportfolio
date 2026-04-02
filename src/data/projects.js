@@ -114,8 +114,7 @@ export const projects = [
     image: siteAssets.focusFarmerLogo,
     imageAlt: 'Focus Farmer logo used as the project cover',
     featured: true,
-    isUnderConstruction: true,
-    isPageUnderConstruction: true,
+    isPageUnderConstruction: false,
     skills: ['Frontend architecture', 'React', 'UI patterns', 'Psychological Research', 'Prototyping'],
     process: [
       'Started off as a standalone web app, then adapted to work as a Chrome extension that embeds its components into the user\'s current page.',
@@ -231,6 +230,47 @@ export const projects = [
       { label: 'DevPost Page', href: 'https://devpost.com/software/beani?_gl=1*12qd6kx*_gcl_au*MjY3ODUwOTgwLjE3NzQ5ODgyODE.*_ga*MTUyNzA2MDIwMi4xNzc0OTg4Mjgx*_ga_0YHJK3Y10M*czE3NzQ5ODgyODAkbzEkZzEkdDE3NzQ5ODg1NTUkajQzJGwwJGgw' },
       { label: 'Demo Video', href: 'https://youtu.be/Gte54Mib1-w' },
     ]
+  }),
+  createProject({
+    slug: 'music-maker',
+    title: 'Musician Paper',
+    summary: 'An interactable music sheet editor that allows users to create and interact with their own custom music sheets.',
+    image: siteAssets.avatarLogo,
+    imageAlt: 'A short description of the project image',
+    featured: false,
+    isUnderConstruction: true,
+    skills: ['Front-End Development', 'UI Implementation', 'UX Design', 'Java Swing'],
+    process: [
+      '.',
+      '.',
+      '.',
+    ],
+    details: [
+      {
+        title: 'Title Placeholder',
+        summary: 'Summary placeholder.',
+        paragraphs: [
+          'Paragraph placeholder.',
+          'Paragraph placeholder.',
+        ],
+        images: [
+          {
+            src: siteAssets.avatarLogo,
+            alt: 'Replace this placeholder with a project-specific image',
+            caption: 'Optional caption text',
+          },
+        ],
+      },
+    ],
+    outcomes: [
+      'Summarize one concrete result.',
+      'Add one user or team benefit.',
+      'Mention a follow-up improvement if it matters.',
+    ],
+    links: [
+      { label: 'Live Demo', href: 'https://example.com' },
+      { label: 'Source Code', href: '' },
+    ],
   }),
 ];
 
