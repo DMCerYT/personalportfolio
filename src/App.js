@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import ProjectDetail from './pages/ProjectDetail';
 import TestPage from './pages/Test';
+import About from './pages/About';
 import NotFound from './components/NotFound';
 
 const DEFAULT_SETTINGS = {
@@ -87,6 +88,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/gtlife" element={<Home />} /> 
           <Route path="/superdupertestpageletsgo" element={<TestPage />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Navbar
