@@ -16,8 +16,8 @@ export default function Home() {
             <Link className={styles.cta} to="/projects">
               View Projects
             </Link>
-            <Link className={styles.secondaryCta} to="/contact">
-              Contact Links
+            <Link className={styles.secondaryCta} to="/about">
+              About Me
             </Link>
           </>
         }

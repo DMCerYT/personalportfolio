@@ -1,9 +1,15 @@
+import { Link } from "react-router-dom";
 import UnderConstruction from "../components/UnderConstruction";
 import styles from "../styles/about.module.css";
 
 export default function About() {
   return (
     <div className={styles.aboutDiv}>
+      <div className={styles.backButton}>
+        <Link className={styles.backLink} to="/">
+        &larr; Back to Home
+        </Link>
+      </div>
       <UnderConstruction />
       <div>
         <p>

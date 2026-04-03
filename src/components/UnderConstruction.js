@@ -10,7 +10,7 @@ export default function UnderConstruction({
       <video className={styles.video} autoPlay loop playsInline muted>
         <source src={siteAssets.catWorkVideo} type="video/mp4" />
       </video>
-      <p>{pageName} is under construction. I sincerely apologize for the inconvenience while I am working on this page.</p>
+      <p>{pageName} is under construction. Please pardon the dust while I am working on this page.</p>
     </div>
   );
 }
