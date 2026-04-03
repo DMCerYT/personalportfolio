@@ -12,8 +12,12 @@ export default function About() {
       </div>
       <UnderConstruction />
       <div>
+        <div idName={styles.intro}>
+          {/* Introduction about who I am */}
+          <h1>About Me</h1>
+        </div>
         <p>
-            My name is Emmanuel Muñoz, but I typically go by Emmet. At the moment of writing this, I am a third year undergraduate studying Computer Science at the Georgia Institute of Technology! 
+            My name is Emmanuel Muñoz, but I typically go by Emmet. I am a third year undergraduate studying Computer Science at the Georgia Institute of Technology! 
         </p>
         <p>
             Throughout my time at Georgia Tech, I balance various responsibilities ranging from academic and laboral.
