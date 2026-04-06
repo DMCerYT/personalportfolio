@@ -34,6 +34,7 @@ export const newProjectTemplate = Object.freeze({
     {
       title: 'Project Story',
       summary: 'Use this optional section for longer narrative context that complements the bullet-point summary.',
+      isVisible: true,
       paragraphs: [
         'Write one or more paragraphs here to explain the project in more depth, such as the problem space, your design decisions, or what made the work meaningful.',
         'These paragraphs are shown inside a collapsible panel on the project detail page so visitors can choose when they want the extra context.',
@@ -62,6 +63,7 @@ export const projectEntrySteps = [
   'Open src/data/projects.js and duplicate the newProjectTemplate shape into the projects array.',
   'Import the project image through src/data/siteAssets.js so the file is bundled by the build.',
   'Set featured: true if the new project should show up on the homepage highlights.',
+  'Set isVisible: false on any detail section you want to keep hidden until the writing is ready.',
   'Add optional details sections with paragraphs and up to three images per section for expandable long-form case study content.',
   'Add optional demo or repository links and they will appear automatically on the detail page.',
 ];
@@ -85,6 +87,7 @@ export const projects = [
       {
         title: 'Design-to-code workflow',
         summary: 'How the visual system and front-end implementation were kept aligned.',
+        isVisible: false,
         paragraphs: [
           'Atlanta Taste Trek gave me the chance to work across both implementation and communication. A big part of the effort was translating a Figma-driven interface into a front-end experience that still felt clean, readable, and maintainable once it became real code.',
           'Instead of leaning on automated conversion tools, I implemented the interface manually so the component structure stayed understandable and flexible. That gave me more control over layout decisions, reuse patterns, and the overall polish of the experience as the product evolved.',
@@ -125,6 +128,7 @@ export const projects = [
       {
         title: 'From web app to extension',
         summary: 'The product direction shifted toward meeting users where they already study.',
+        isVisible: false,
         paragraphs: [
           'Focus Farmer started as a standalone React app, but the more compelling version of the idea was one that could live directly inside the user\'s browsing routine. Moving it into a Chrome extension changed the technical constraints and made me think much more carefully about how the experience should coexist with someone else\'s page.',
           'That shift also strengthened the product concept. Instead of asking users to open a separate site and maintain a new habit, the tool could support focus in the exact environment where distractions usually happen.',
@@ -169,6 +173,7 @@ export const projects = [
       {
         title: 'Research foundation',
         summary: 'This project was driven by user research before interface decisions were finalized.',
+        isVisible: false,
         paragraphs: [
           'Money Mentor was shaped by a strong research phase rather than jumping directly into polished screens. The surveys, interviews, and affinity mapping work helped define what students were actually struggling with, which made the later design decisions much more grounded.',
           'That process also helped me connect abstract financial-literacy goals to concrete user scenarios. By the time the prototype reached testing, there was already a clearer sense of which tasks mattered most and where support could reduce confusion or anxiety.',
@@ -206,6 +211,7 @@ export const projects = [
       {
         title: 'Lightweight machine-learning concept',
         summary: 'BeanI balanced playful product design with a focused technical scope.',
+        isVisible: false,
         paragraphs: [
           'BeanI was designed to feel approachable while still demonstrating a real technical idea. The project combines image-based roast classification with coffee-preparation guidance, which made it a good exercise in pairing a specialized model with a more consumer-friendly interaction flow.',
           'A lot of the value came from keeping the experience lightweight and understandable. Rather than overcomplicating the system, the concept stays focused on helping users make sense of what they are looking at and how that can inform the way they brew coffee.',
@@ -241,9 +247,9 @@ export const projects = [
     isUnderConstruction: true,
     skills: ['Front-End Development', 'UI Implementation', 'UX Design', 'Java Swing'],
     process: [
-      '.',
-      '.',
-      '.',
+      'Paragraph placeholder.',
+      'Paragraph placeholder.',
+      'Paragraph placeholder.',
     ],
     details: [
       {
@@ -263,9 +269,9 @@ export const projects = [
       },
     ],
     outcomes: [
-      'Summarize one concrete result.',
-      'Add one user or team benefit.',
-      'Mention a follow-up improvement if it matters.',
+      'Placeholder.',
+      'Placeholder.',
+      'Placeholder.',
     ],
     links: [
       { label: 'Live Demo', href: 'https://example.com' },

@@ -1,4 +1,4 @@
-import avatarLogo from '../assets/navbar-icons/avatarlogo.jpeg';
+import avatarLogo from '../assets/navbar-icons/avatarlogo2.webp';
 // import avatarTwoLogo from '../assets/navbar-icons/avatarlogo2.jpeg';
 
 // Individual Project Assets

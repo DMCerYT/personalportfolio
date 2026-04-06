@@ -9,6 +9,7 @@ import detailStyles from '../styles/projectDetail.module.css';
 export default function ProjectDetail() {
   const { slug } = useParams();
   const project = getProjectBySlug(slug);
+  const visibleDetails = project?.details?.filter((section) => section.isVisible !== false) ?? [];
 
   if (!project) {
     return <Navigate to="/projects" replace />;
@@ -49,7 +50,7 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      {project.details.length > 0 ? (
+      {visibleDetails.length > 0 ? (
         <DetailPanel title="Project Details" fullWidth>
           <ProjectDetailSections sections={project.details} />
         </DetailPanel>

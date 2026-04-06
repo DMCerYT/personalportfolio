@@ -38,13 +38,15 @@ function ProjectDetailSection({ title, summary, paragraphs = [], images = [] }) 
 }
 
 export default function ProjectDetailSections({ sections = [] }) {
-  if (sections.length === 0) {
+  const visibleSections = sections.filter((section) => section.isVisible !== false);
+
+  if (visibleSections.length === 0) {
     return null;
   }
 
   return (
     <div className={detailStyles.detailSectionList}>
-      {sections.map((section) => (
+      {visibleSections.map((section) => (
         <ProjectDetailSection
           key={section.title}
           title={section.title}
