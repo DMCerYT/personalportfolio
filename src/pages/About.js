@@ -20,7 +20,7 @@ export default function About() {
             My name is Emmanuel Muñoz, but I typically go by Emmet. I am a third year undergraduate studying Computer Science at the Georgia Institute of Technology! 
         </p>
         <p>
-            Throughout my time at Georgia Tech, I balance various responsibilities ranging from academic and laboral.
+            Throughout my time at Georgia Tech, I balance various responsibilities ranging from academic and laboral. It hasn't been easy, but I have learned how to manage my time effectively and ensure that I meet all of my obligations while still maintaining my scholarship.
         </p>
         <p>
             Outside of campus, I am distribution manager at my family's business, EMCA Foods LLC, and have maintained this position since 2020. I am responsible for directly supervising and managing our employees ensuring that they properly deliver and merchandise in a timely and ordered manner.
