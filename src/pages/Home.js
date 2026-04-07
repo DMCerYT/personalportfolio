@@ -10,7 +10,7 @@ export default function Home() {
     <main className={styles.page}>
       <PageIntro
         title="Emmanuel (Emmet) Munoz / DMCer"
-        description="Software engineer, builder, and portfolio owner. This homepage now uses a shared component system so the navigation, project cards, and page sections stay consistent as the portfolio grows."
+        description="Software engineer, builder, and portfolio owner. I have a passion for creating impactful projects and sharing my journey in the world of software development."
         actions={
           <>
             <Link className={styles.cta} to="/projects">
