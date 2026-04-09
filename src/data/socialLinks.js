@@ -17,7 +17,7 @@ export const socialLinks = [
     name: 'Youtube',
     handle: 'DMCer',
     image: siteAssets.youtubePositive,
-    href: 'https://www.youtube.com/@DMCerYT',
+    href: 'https://www.youtube.com/@DMCer123',
   },
   {
     name: 'Facebook',
