@@ -21,9 +21,9 @@ export const socialLinks = [
   },
   {
     name: 'Facebook',
-    handle: 'Request a copy',
+    handle: 'Emmanuel Munoz',
     image: siteAssets.facebookPositive,
-    href: 'mailto:emunoz31@gatech.edu?subject=Resume%20Request',
+    href: 'https://www.facebook.com/emmet.munoz.2025',
   },
   {
     name: 'Instagram',
