@@ -87,6 +87,8 @@
   margin-top: 28px;
 }
 
+/* Here are where the primary button component styles live */
+
 .cta,
 .secondaryCta {
   border-radius: 999px;
@@ -96,6 +98,7 @@
   letter-spacing: 0.04em;
   padding: 14px 20px;
   text-decoration: none;
+  margin: 0 4px;
 }
 
 .cta {
@@ -103,6 +106,15 @@
     linear-gradient(180deg, rgba(55, 165, 255, 0.95), rgba(24, 144, 255, 0.88));
   box-shadow: 0 10px 20px rgba(24, 144, 255, 0.16);
   color: #e6f7ff;
+  transition: ease-in-out 0.1s;
+}
+
+.cta:hover {
+  background:
+    linear-gradient(180deg, rgba(55, 165, 255, 1), rgba(24, 144, 255, 0.92));
+  box-shadow: 0 4px 20px rgba(24, 144, 255, 0.5);
+  transform: translateY(-2px);
+  transition: ease-in-out 0.1s;
 }
 
 .secondaryCta {
@@ -110,6 +122,23 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(198, 232, 255, 0.28));
   border: 1px solid rgba(255, 255, 255, 0.44);
   color: #1890ff;
+  transition: ease-in-out 0.1s;
+}
+
+.secondaryCta:hover {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(198, 232, 255, 0.36));
+  border: 1px solid linear-gradient(180deg, rgba(55, 165, 255, 1), rgba(24, 144, 255, 0.92));
+
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(24, 144, 255, 0.3);
+  transition: ease-in-out 0.1s;
+}
+
+/* Here is where the back button information lives */
+
+.backButton {
+  color: red;
 }
 
 .section {
