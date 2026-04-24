@@ -15,3 +15,46 @@
   position: relative;
   z-index: 1;
 }
+
+.pageTransition {
+  min-height: 100vh;
+}
+
+.pageFadeIn {
+  animation: pageFadeIn 260ms ease both;
+}
+
+.pageFadeOut {
+  animation: pageFadeOut 260ms ease both;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageFadeIn,
+  .pageFadeOut {
+    animation: none;
+  }
+}

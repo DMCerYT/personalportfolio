@@ -15,8 +15,8 @@
 .desktopNavbar {
   align-items: center;
   background:
-    linear-gradient(135deg, rgba(240, 250, 255, 0.9), rgba(201, 230, 250, 0.78)),
-    rgba(0, 134, 244, 0.22);
+    linear-gradient(135deg, rgba(240, 250, 255, 0.22), rgba(201, 230, 250, 0.12)),
+    rgba(0, 134, 244, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 0 0 60px 0;
   box-shadow:

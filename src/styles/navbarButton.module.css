@@ -4,8 +4,8 @@
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(136, 181, 255, 0.15)),
-    rgba(102, 129, 249, 0.18);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(136, 181, 255, 0.45)),
+    rgba(102, 129, 249, 0.28);
   border: 1px solid rgba(255, 255, 255, 0.34);
   border-radius: 20px;
   box-shadow:
