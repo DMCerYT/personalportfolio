@@ -36,7 +36,7 @@
 }
 
 .wrapper p {
-  color: #264765;
+  color: var(--ink, #264765);
   font-family: 'Geologica', sans-serif;
   font-size: 1.1rem;
   letter-spacing: 0.03em;

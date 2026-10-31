@@ -12,7 +12,7 @@ export default function WorkSection({ roles }) {
       <div className={styles.sectionInner}>
         <div className={styles.sectionHeading}>
           <h2 id="current-work-title" className={styles.sectionTitle}>
-            Currently Working As the Following
+            Current and Ongoing Experiences:
           </h2>
           <div className={styles.sectionDivider} />
         </div>

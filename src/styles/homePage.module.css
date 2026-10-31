@@ -25,7 +25,7 @@
 }
 
 .heroCard {
-  background: #667889;
+  background: var(--surface-background, #667889);
   border-radius: 31px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin-right: 130px;
@@ -49,9 +49,9 @@
 
 .heroContentPanel {
   align-items: center;
-  background: #d0d8df;
+  background: var(--surface-background, #d0d8df);
   border-radius: 15px;
-  color: #000000;
+  color: var(--ink, #000000);
   display: flex;
   flex-direction: column;
   margin-left: 18px;
@@ -133,7 +133,7 @@
 }
 
 .secondaryAction {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface-background, rgba(255, 255, 255, 0.08));
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #d7e5f3;
 }
@@ -189,10 +189,10 @@
 }
 
 .roleCard {
-  background: #d0d8df;
+  background: var(--surface-background, #d0d8df);
   border: 2px solid transparent;
   border-radius: 21px;
-  color: #000000;
+  color: var(--ink, #000000);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -215,7 +215,7 @@
 }
 
 .roleIcon {
-  color: #323232;
+  color: var(--ink, #323232);
   display: inline-flex;
   height: 78px;
   margin: 0 auto 14px;
@@ -252,7 +252,7 @@
 }
 
 .roleSince {
-  color: #6b6b6b;
+  color: var(--muted-ink, #6b6b6b);
   font-size: 0.85rem;
   margin: 10px 0 0;
   text-align: right;
@@ -303,8 +303,7 @@
 }
 
 .skillsSection {
-  background:
-    linear-gradient(90deg, #667889 0%, #667889 54%, rgba(102, 120, 137, 0.84) 70%, rgba(102, 120, 137, 0) 100%);
+  background: var(--surface-background, linear-gradient(90deg, #667889 0%, #667889 54%, rgba(102, 120, 137, 0.84) 70%, rgba(102, 120, 137, 0) 100%));
   padding: 94px 0 88px;
 }
 
@@ -347,9 +346,9 @@
 
 .skillPill {
   align-items: center;
-  background: #e6e6e6;
+  background: var(--surface-background, #e6e6e6);
   border-radius: 37px;
-  color: #20384f;
+  color: var(--ink, #20384f);
   display: flex;
   font-family: 'Geologica', sans-serif;
   font-size: 1rem;
@@ -372,12 +371,12 @@
 }
 
 .skillPill1::before {
-  background: linear-gradient(90deg, rgba(102, 120, 137, 0) 0%, rgba(102, 120, 137, 0.88) 100%);
+  background: var(--surface-background, linear-gradient(90deg, rgba(102, 120, 137, 0) 0%, rgba(102, 120, 137, 0.88) 100%));
   border-radius: inherit;
 }
 
 .skillPill6::after {
-  background: linear-gradient(90deg, rgba(102, 120, 137, 0.88) 0%, rgba(102, 120, 137, 0) 100%);
+  background: var(--surface-background, linear-gradient(90deg, rgba(102, 120, 137, 0.88) 0%, rgba(102, 120, 137, 0) 100%));
   border-radius: inherit;
 }
 
@@ -517,7 +516,7 @@
   }
 
   .skillsSection {
-    background: #667889;
+    background: var(--surface-background, #667889);
     padding: 54px 0 62px;
   }
 

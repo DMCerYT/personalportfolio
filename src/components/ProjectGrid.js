@@ -8,6 +8,7 @@ export default function ProjectGrid({ projects, className = '' }) {
         <ProjectCard
           key={project.slug}
           title={project.title}
+          discipline={project.discipline}
           description={project.summary}
           image={project.image}
           imageAlt={project.imageAlt}

@@ -1,8 +1,7 @@
 .card {
   align-items: center;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(171, 219, 255, 0.2)),
-    rgba(0, 134, 244, 0.16);
+  background: var(--surface-background, linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(171, 219, 255, 0.2)),
+    rgba(0, 134, 244, 0.16));
   border: 1px solid rgba(255, 255, 255, 0.38);
   border-radius: 31px;
   box-shadow:

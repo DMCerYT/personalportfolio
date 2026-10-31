@@ -1,170 +1,31 @@
 .panel {
-  background:
-    linear-gradient(180deg, rgba(249, 253, 255, 0.94), rgba(206, 233, 255, 0.74)),
-    rgba(0, 134, 244, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 28px;
-  box-shadow:
-    0 18px 40px rgba(24, 144, 255, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.56);
-  min-width: min(420px, calc(100vw - 32px));
-  padding: 22px;
+  width: 292px; max-width: calc(100vw - 28px); min-height: 282px; padding: 13px 16px 30px;
+  border-radius: 20px; background: rgba(95,127,156,.41); color: #efefef;
+  backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);
+  font: 400 15px/1.4 'Kanchenjunga', sans-serif;
+  max-height: calc(100dvh - 140px); overflow-y: auto;
 }
-
-:global(body[data-performance-mode='standard']) .panel {
-  backdrop-filter: blur(26px) saturate(150%);
-  -webkit-backdrop-filter: blur(26px) saturate(150%);
-}
-
-.header {
-  align-items: start;
-  display: flex;
-  gap: 16px;
-  justify-content: space-between;
-}
-
-.eyebrow {
-  color: #5d7fa3;
-  font-family: 'Geologica', sans-serif;
-  letter-spacing: 0.14em;
-  margin: 0 0 6px;
-  text-transform: uppercase;
-}
-
-.header h1 {
-  color: #1890ff;
-  font-family: 'Geologica', sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  margin: 0;
-}
-
-.closeButton {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(198, 232, 255, 0.48));
-  border: 1px solid rgba(255, 255, 255, 0.46);
-  border-radius: 999px;
-  color: #156dbf;
-  cursor: pointer;
-  font-family: 'Geologica', sans-serif;
-  padding: 10px 14px;
-}
-
-.settingsList {
-  display: grid;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.settingRow {
-  align-items: center;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(225, 242, 255, 0.52));
-  border: 1px solid rgba(255, 255, 255, 0.48);
-  border-radius: 22px;
-  display: grid;
-  gap: 14px;
-  grid-template-columns: minmax(0, 1fr) auto;
-  padding: 18px;
-}
-
-.settingCopy h2 {
-  color: #1890ff;
-  font-family: 'Geologica', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin: 0 0 8px;
-}
-
-.settingCopy p {
-  color: #264765;
-  font-family: 'Geologica', sans-serif;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.settingControl {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.toggle {
-  cursor: pointer;
-  display: inline-flex;
-}
-
-.toggle input {
-  display: none;
-}
-
-.toggleTrack {
-  align-items: center;
-  background: rgba(24, 144, 255, 0.16);
-  border: 1px solid rgba(24, 144, 255, 0.18);
-  border-radius: 999px;
-  display: inline-flex;
-  height: 34px;
-  padding: 3px;
-  transition: background-color 180ms ease, border-color 180ms ease;
-  width: 66px;
-}
-
-.toggleThumb {
-  background: linear-gradient(180deg, #ffffff, #d8f0ff);
-  border-radius: 999px;
-  box-shadow: 0 4px 10px rgba(24, 144, 255, 0.18);
-  display: block;
-  height: 26px;
-  transform: translateX(0);
-  transition: transform 180ms ease;
-  width: 26px;
-}
-
-.toggle input:checked + .toggleTrack {
-  background: rgba(24, 144, 255, 0.3);
-  border-color: rgba(24, 144, 255, 0.28);
-}
-
-.toggle input:checked + .toggleTrack .toggleThumb {
-  transform: translateX(32px);
-}
-
-.disabledControl {
-  cursor: not-allowed;
-  opacity: 0.55;
-}
-
-.select {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(220, 240, 255, 0.58));
-  border: 1px solid rgba(24, 144, 255, 0.18);
-  border-radius: 999px;
-  color: #5d7fa3;
-  font-family: 'Geologica', sans-serif;
-  min-width: 120px;
-  padding: 10px 14px;
-}
-
-@media (max-width: 860px) {
-  .panel {
-    min-width: auto;
-    padding: 18px;
-    width: min(366px, calc(100vw - 28px));
-  }
-
-  .header {
-    align-items: center;
-  }
-
-  .header h1 {
-    font-size: 1.6rem;
-  }
-
-  .settingRow {
-    grid-template-columns: 1fr;
-  }
-
-  .settingControl {
-    justify-content: flex-start;
-  }
-}
+.header { display: flex; align-items: center; gap: 11px; height: 44px; margin-bottom: 12px; }
+.header > img { display: block; flex-shrink: 0; }
+.header h2 { font: 700 24px/1.2 'Kanchenjunga', sans-serif; margin: 0; }
+.closeButton { margin-left: auto; border: 0; border-radius: 8px; width: 50px; height: 44px; flex: 0 0 50px; display: grid; place-items: center; background: linear-gradient(180deg, #f16060 2.4%, #ed4d4d 18.27%, #e94b4b 71.64%, #ce3f3f); }
+.closeButton img { display: block; }
+.appearance { margin: 0; padding: 0; border: 0; min-width: 0; }
+.appearance legend { padding: 0; margin-bottom: 6px; }
+.themeOptions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.themeOption { position: relative; cursor: pointer; }
+.themeOption input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.themeCard { display: flex; flex-direction: column; align-items: center; height: 82px; border-radius: 16px; background: rgba(95,127,156,.41); padding: 6px 6px 0; }
+.themeOption input:checked + .themeCard { background: rgba(49,98,154,.2); }
+.preview { display: block; position: relative; overflow: hidden; border-radius: 8px; width: 112px; max-width: 100%; height: 54px; flex-shrink: 0; }
+.preview img { position: absolute; top: -.18%; left: 0; max-width: none; height: 332.59%; }
+.lightPreview { width: 268.87%; }
+.darkPreview { width: 266.49%; }
+.settingRow { display: flex; align-items: center; justify-content: space-between; gap: 4px; margin-top: 7px; min-height: 32px; }
+.settingRow > span { white-space: nowrap; }
+.languageRow { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: center; margin-top: 4px; }
+.selectWrap { position: relative; }
+.selectWrap select { color-scheme: light; appearance: none; width: 100%; height: 30px; padding: 2px 32px 2px 13px; border: 0; border-radius: 8px; background: #efefef; color: #000; font: inherit; }
+.selectWrap img { position: absolute; right: 10px; top: 12px; pointer-events: none; }
+.closeButton:focus-visible, .selectWrap select:focus-visible, .themeOption input:focus-visible + .themeCard { outline: 2px solid #fff; outline-offset: 3px; }
+@media (forced-colors: active) { .themeOption input:checked + .themeCard { outline: 2px solid Highlight; } }

@@ -1,8 +1,7 @@
 .hero {
   align-items: center;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.56), rgba(174, 221, 255, 0.28)),
-    linear-gradient(135deg, rgba(0, 134, 244, 0.12), rgba(102, 129, 249, 0.12));
+  background: var(--surface-background, linear-gradient(135deg, rgba(255, 255, 255, 0.56), rgba(174, 221, 255, 0.28)),
+    linear-gradient(135deg, rgba(0, 134, 244, 0.12), rgba(102, 129, 249, 0.12)));
   border: 1px solid rgba(255, 255, 255, 0.44);
   border-radius: 40px;
   box-shadow:
@@ -25,7 +24,7 @@
 }
 
 .copy h1 {
-  color: #1890ff;
+  color: var(--accent-ink, #1890ff);
   font-family: 'Geologica', sans-serif;
   font-size: clamp(2.4rem, 4vw, 4.2rem);
   font-weight: 400;
@@ -41,14 +40,14 @@
 }
 
 .eyebrow {
-  color: #5d7fa3;
+  color: var(--muted-ink, #5d7fa3);
   letter-spacing: 0.14em;
   margin: 0 0 10px;
   text-transform: uppercase;
 }
 
 .summary {
-  color: #264765;
+  color: var(--ink, #264765);
   font-size: 1.1rem;
   line-height: 1.6;
   margin: 0;
@@ -65,7 +64,7 @@
 }
 
 .detailSection {
-  background: rgba(255, 255, 255, 0.58);
+  background: var(--surface-background, rgba(255, 255, 255, 0.58));
   border: 1px solid rgba(24, 144, 255, 0.14);
   border-radius: 24px;
   overflow: hidden;
@@ -94,14 +93,14 @@
 }
 
 .detailSectionSummary h3 {
-  color: #1890ff;
+  color: var(--accent-ink, #1890ff);
   font-size: 1.2rem;
   font-weight: 400;
   margin: 0 0 6px;
 }
 
 .detailSectionSummary p {
-  color: #426380;
+  color: var(--muted-ink, #426380);
   line-height: 1.55;
   margin: 0;
   max-width: 62ch;
@@ -111,7 +110,7 @@
   background: rgba(24, 144, 255, 0.12);
   border: 1px solid rgba(24, 144, 255, 0.16);
   border-radius: 999px;
-  color: #156dbf;
+  color: var(--link-ink, #156dbf);
   flex-shrink: 0;
   padding: 10px 14px;
 }
@@ -141,7 +140,7 @@
 }
 
 .detailSectionBody p {
-  color: #264765;
+  color: var(--ink, #264765);
   line-height: 1.75;
   margin: 0;
 }
@@ -165,7 +164,7 @@
 }
 
 .detailFigure figcaption {
-  color: #5d7fa3;
+  color: var(--muted-ink, #5d7fa3);
   line-height: 1.5;
   margin-top: 10px;
 }
@@ -178,8 +177,7 @@
 }
 
 .panel {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(225, 242, 255, 0.5));
+  background: var(--surface-background, linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(225, 242, 255, 0.5)));
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 28px;
   box-shadow:
@@ -189,7 +187,7 @@
 }
 
 .panel h2 {
-  color: #1890ff;
+  color: var(--accent-ink, #1890ff);
   font-family: 'Geologica', sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
@@ -204,7 +202,7 @@
 }
 
 .panel li {
-  color: #264765;
+  color: var(--ink, #264765);
   line-height: 1.55;
 }
 
@@ -224,7 +222,7 @@
   background: rgba(24, 144, 255, 0.12);
   border: 1px solid rgba(24, 144, 255, 0.16);
   border-radius: 999px;
-  color: #156dbf;
+  color: var(--link-ink, #156dbf);
   font-family: 'Geologica', sans-serif;
   padding: 10px 14px;
   text-decoration: none;
@@ -234,7 +232,7 @@
   background: rgba(24, 144, 255, 0.12);
   border: 1px solid rgba(24, 144, 255, 0.16);
   border-radius: 999px;
-  color: #156dbf;
+  color: var(--link-ink, #156dbf);
   padding: 10px 14px;
 }
 
@@ -261,3 +259,27 @@
     grid-column: auto;
   }
 }
+
+.selectedWork { margin: 40px auto 64px; max-width: 1152px; padding: 0 24px; }
+.selectedWork h2, .overview h2, .storySection h2, .closing h2 { color: var(--link-ink, #1564a8); font-family: 'Geologica', sans-serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; margin: 0 0 16px; }
+.selectedWork > p, .overview > p, .storySection p, .storySection li { color: var(--ink, #264765); font-family: 'Geologica', sans-serif; line-height: 1.8; }
+.selectedWork > p { margin-bottom: 24px; }
+.overview { margin: 32px 0; padding: 28px; border-left: 3px solid #1890ff; background: rgba(255,255,255,.55); border-radius: 0 20px 20px 0; }
+.overview p { margin: 0; }
+.caseNav { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 20px 0; border-block: 1px solid #9ab8d2; }
+.caseNav a { color: var(--link-ink, #155a96); font-family: 'Geologica', sans-serif; text-underline-offset: 5px; padding: 6px 0; }
+.storySection { padding: 40px 0; border-bottom: 1px solid #b6ccdf; scroll-margin-top: 180px; }
+.storySection > p, .storySection ol { max-width: 76ch; }
+.storySection ol { padding-left: 24px; }
+.storySection li { padding-left: 8px; margin-bottom: 16px; }
+.storySection h3 { color: var(--ink, #264765); font-family: 'Geologica', sans-serif; margin-top: 28px; }
+.artifactGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr)); gap: 24px; margin-top: 28px; }
+.artifact { margin: 0; background: rgba(255,255,255,.6); border: 1px solid #b6ccdf; border-radius: 20px; overflow: hidden; }
+.artifact img { display: block; width: 100%; height: auto; }
+.artifact figcaption { padding: 20px; color: var(--ink, #264765); font-family: 'Geologica', sans-serif; }
+.artifact figcaption p { margin-bottom: 0; font-size: .95rem; }
+.closing { margin-top: 48px; }
+.closing a { margin: 8px 16px 0 0; }
+.image { object-fit: contain; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.caseNav a:focus-visible { outline: 3px solid #1564a8; outline-offset: 5px; }

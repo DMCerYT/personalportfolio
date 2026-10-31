@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="38" height="18" viewBox="0 0 38 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="on-toggle">
+<foreignObject x="-4" y="-4" width="46" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(2px);clip-path:url(#bgblur_0_0_4_clip_path);height:100%;width:100%"></div></foreignObject><rect id="Rectangle 14" data-figma-bg-blur-radius="4" width="38" height="18" rx="9" fill="#5F7F9C" fill-opacity="0.41"/>
+<rect id="Rectangle 15" x="3" y="2" width="32" height="14" rx="7" fill="#629FD6"/>
+<circle id="Ellipse 2" cx="28" cy="9" r="6" fill="#F1F9FF"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_0_4_clip_path" transform="translate(4 4)"><rect width="38" height="18" rx="9"/>
+</clipPath></defs>
+</svg>

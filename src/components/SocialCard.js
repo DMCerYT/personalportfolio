@@ -1,3 +1,4 @@
+import ResourceLink from './ResourceLink';
 import styles from '../styles/socialCard.module.css';
 
 export default function SocialCard({
@@ -17,9 +18,9 @@ export default function SocialCard({
   );
 
   return href ? (
-    <a className={styles.card} href={href} target="_blank" rel="noreferrer">
+    <ResourceLink className={styles.card} href={href}>
       {inner}
-    </a>
+    </ResourceLink>
   ) : (
     <article className={styles.card}>{inner}</article>
   );

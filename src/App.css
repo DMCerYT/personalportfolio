@@ -5,9 +5,8 @@
 }
 
 .appShell {
-  background:
-    radial-gradient(circle at top left, rgba(24, 144, 255, 0.12), transparent 30%),
-    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  background: var(--surface-background, radial-gradient(circle at top left, rgba(24, 144, 255, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%));
   isolation: isolate;
 }
 
@@ -58,3 +57,18 @@
     animation: none;
   }
 }
+
+body[data-theme='dark'] {
+  color-scheme: dark;
+  background: #171e27;
+  color: #e6edf5;
+  --ink: #e6edf5;
+  --muted-ink: #b7c9da;
+  --accent-ink: #8acaff;
+  --link-ink: #a1d4ff;
+  --surface-background: linear-gradient(160deg, rgba(49, 64, 81, .96), rgba(30, 41, 54, .97));
+}
+body[data-theme='dark'] .appShell { background: radial-gradient(circle at top left, #24394d, transparent 40%), #171e27; }
+/* The toggle itself retains feedback; turning effects off stops ambient/page motion. */
+body[data-motion='reduced'] .pageFadeIn,
+body[data-motion='reduced'] .pageFadeOut { animation: none; }

@@ -16,6 +16,13 @@ export default function NavbarButton({
   const baseClassName = mobile ? styles.mobileButton : styles.button;
   const className = `${baseClassName} ${iconOnly ? styles.iconOnly : ''} ${active ? styles.active : ''} ${extraClassName}`.trim();
 
+  const content = (
+    <>
+      <img className={styles.icon} src={icon} alt="" aria-hidden="true" />
+      {iconOnly ? null : <span className={styles.text}>{text}</span>}
+    </>
+  );
+
   if (!link) {
     return (
       <button
@@ -25,8 +32,7 @@ export default function NavbarButton({
         aria-label={buttonLabel || text}
         aria-pressed={active}
       >
-        <img className={styles.icon} src={icon} alt="" aria-hidden="true" />
-        {iconOnly ? null : <span className={styles.text}>{text}</span>}
+        {content}
       </button>
     );
   }
@@ -38,8 +44,7 @@ export default function NavbarButton({
       onClick={onNavigate}
       aria-label={buttonLabel || text}
     >
-      <img className={styles.icon} src={icon} alt="" aria-hidden="true" />
-      {iconOnly ? null : <span className={styles.text}>{text}</span>}
+      {content}
     </NavLink>
   );
 }

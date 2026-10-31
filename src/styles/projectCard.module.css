@@ -9,9 +9,8 @@
 }
 
 .glass {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(124, 174, 221, 0.16)),
-    rgba(49, 98, 154, 0.16);
+  background: var(--surface-background, linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(124, 174, 221, 0.16)),
+    rgba(49, 98, 154, 0.16));
   border: 1px solid rgba(255, 255, 255, 0.36);
   border-radius: 37px;
   box-shadow:
@@ -22,8 +21,7 @@
 
 .panel {
   align-items: center;
-  background:
-    linear-gradient(180deg, rgba(173, 213, 244, 0.96), rgba(123, 161, 197, 0.94));
+  background: var(--surface-background, linear-gradient(180deg, rgba(173, 213, 244, 0.96), rgba(123, 161, 197, 0.94)));
   border-radius: 12px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34);
   display: grid;
@@ -45,8 +43,7 @@
 .titleCard,
 .descriptionCard {
   align-items: center;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.72));
+  background: var(--surface-background, linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.72)));
   border: 1px solid rgba(255, 255, 255, 0.54);
   border-radius: 10px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
@@ -122,8 +119,7 @@
 
   .descriptionCard {
     align-self: end;
-    background:
-      linear-gradient(180deg, rgba(16, 106, 191, 0.9), rgba(0, 78, 151, 0.88));
+    background: var(--surface-background, linear-gradient(180deg, rgba(16, 106, 191, 0.9), rgba(0, 78, 151, 0.88)));
     border-color: rgba(198, 228, 255, 0.26);
     color: #ffffff;
     min-height: 41px;
@@ -140,4 +136,17 @@
     font-size: 1rem;
     letter-spacing: 0.03em;
   }
+}
+
+.discipline { color: var(--muted-ink, #345675); font-family: 'Geologica', sans-serif; font-size: .8rem; line-height: 1.5; margin: 0 0 8px; }
+.link:focus-visible { outline: 3px solid #1564a8; outline-offset: 6px; border-radius: 37px; }
+.image { image-rendering: auto; }
+@media (max-width: 720px) {
+  .panel { grid-template-columns: 90px minmax(0, 1fr); grid-template-rows: auto auto; gap: 8px; }
+  .image { width: 90px; height: 90px; align-self: start; }
+  .titleCard { min-height: 84px; width: 100%; box-sizing: border-box; }
+  .titleCard h2 { font-size: 1.25rem; overflow-wrap: anywhere; }
+  .descriptionCard { grid-column: 1 / -1; display: block; text-align: left; }
+  .desktopDescription { display: block; font-size: .95rem; line-height: 1.6; margin-bottom: 12px; }
+  .mobileCta { font-size: .9rem; }
 }

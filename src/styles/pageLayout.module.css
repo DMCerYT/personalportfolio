@@ -8,9 +8,8 @@
 
 .hero {
   align-items: start;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.46), rgba(174, 221, 255, 0.24)),
-    linear-gradient(135deg, rgba(0, 134, 244, 0.12), rgba(102, 129, 249, 0.1));
+  background: var(--surface-background, linear-gradient(135deg, rgba(255, 255, 255, 0.46), rgba(174, 221, 255, 0.24)),
+    linear-gradient(135deg, rgba(0, 134, 244, 0.12), rgba(102, 129, 249, 0.1)));
   border: 1px solid rgba(255, 255, 255, 0.44);
   border-radius: 40px;
   box-shadow:
@@ -25,8 +24,7 @@
 }
 
 .heroAside {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(213, 237, 255, 0.4));
+  background: var(--surface-background, linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(213, 237, 255, 0.4)));
   border: 1px solid rgba(255, 255, 255, 0.44);
   border-radius: 28px;
   box-shadow:
@@ -36,7 +34,7 @@
 }
 
 .heroAsideLabel {
-  color: #5d7fa3;
+  color: var(--muted-ink, #5d7fa3);
   font-family: 'Geologica', sans-serif;
   font-size: 0.95rem;
   letter-spacing: 0.14em;
@@ -53,7 +51,7 @@
   background: rgba(24, 144, 255, 0.08);
   border: 1px solid rgba(24, 144, 255, 0.1);
   border-radius: 20px;
-  color: #156dbf;
+  color: var(--link-ink, #156dbf);
   font-family: 'Geologica', sans-serif;
   padding: 14px 16px;
   text-decoration: none;
@@ -61,7 +59,7 @@
 
 .heroCopy h1,
 .sectionHeader h1 {
-  color: #1890ff;
+  color: var(--accent-ink, #1890ff);
   font-family: 'Geologica', sans-serif;
   font-size: clamp(2.5rem, 4vw, 4.5rem);
   font-weight: 400;
@@ -71,7 +69,7 @@
 
 .heroCopy p,
 .sectionHeader p {
-  color: #264765;
+  color: var(--ink, #264765);
   font-family: 'Geologica', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.01em;
@@ -99,17 +97,15 @@
 }
 
 .cta {
-  background:
-    linear-gradient(180deg, rgba(55, 165, 255, 0.95), rgba(24, 144, 255, 0.88));
+  background: var(--surface-background, linear-gradient(180deg, rgba(55, 165, 255, 0.95), rgba(24, 144, 255, 0.88)));
   box-shadow: 0 10px 20px rgba(24, 144, 255, 0.16);
   color: #e6f7ff;
 }
 
 .secondaryCta {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(198, 232, 255, 0.28));
+  background: var(--surface-background, linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(198, 232, 255, 0.28)));
   border: 1px solid rgba(255, 255, 255, 0.44);
-  color: #1890ff;
+  color: var(--accent-ink, #1890ff);
 }
 
 .section {
@@ -179,18 +175,17 @@
 }
 
 .carouselButton {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(198, 232, 255, 0.42));
+  background: var(--surface-background, linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(198, 232, 255, 0.42)));
   border: 1px solid rgba(24, 144, 255, 0.14);
   border-radius: 999px;
-  color: #156dbf;
+  color: var(--link-ink, #156dbf);
   cursor: pointer;
   font-family: 'Geologica', sans-serif;
   padding: 12px 16px;
 }
 
 .carouselStatus {
-  color: #5d7fa3;
+  color: var(--muted-ink, #5d7fa3);
   font-family: 'Geologica', sans-serif;
   margin: 0;
 }
@@ -201,8 +196,7 @@
 }
 
 .infoCard {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(225, 242, 255, 0.5));
+  background: var(--surface-background, linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(225, 242, 255, 0.5)));
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 28px;
   box-shadow:
@@ -212,7 +206,7 @@
 }
 
 .simpleList {
-  color: #264765;
+  color: var(--ink, #264765);
   display: grid;
   font-family: 'Geologica', sans-serif;
   gap: 14px;
