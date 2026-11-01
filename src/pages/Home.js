@@ -1,50 +1,24 @@
-import { Link } from 'react-router-dom';
-import ContentSection from '../components/ContentSection';
-import FeaturedProjects from '../components/FeaturedProjects';
-import PageIntro from '../components/PageIntro';
+import ProjectGrid from '../components/ProjectGrid';
 import { featuredProjects } from '../data/projects';
-import styles from '../styles/pageLayout.module.css';
+import detailStyles from '../styles/projectDetail.module.css';
+import HomeHero from '../components/home/HomeHero';
+import SkillsSection from '../components/home/SkillsSection';
+import WorkSection from '../components/home/WorkSection';
+import { currentRoles, homeHero, skillPills } from '../data/homeContent';
+import styles from '../styles/homePage.module.css';
 
 export default function Home() {
   return (
     <main className={styles.page}>
-      <PageIntro
-        title="Emmanuel (Emmet) Munoz / DMCer"
-        description="Software engineer, builder, and portfolio owner. I have a passion for creating impactful projects and sharing my journey in the world of software development."
-        actions={
-          <>
-            <Link className={styles.cta} to="/projects">
-              View Projects
-            </Link>
-            <Link className={styles.secondaryCta} to="/about">
-              About Me
-            </Link>
-          </>
-        }
-        aside={
-          <>
-          <p className={styles.heroAsideLabel}>Highlighted Work</p>
-          <div className={styles.heroAsideList}>
-            {featuredProjects.slice(0, 2).map((project) => (
-              <Link
-                key={project.slug}
-                className={styles.heroAsideItem}
-                to={`/projects/${project.slug}`}
-              >
-                <span>{project.title}</span>
-              </Link>
-            ))}
-          </div>
-          </>
-        }
-      />
-
-      <ContentSection
-        title="Highlighted Projects"
-        description="These are some of the projects I have had a blast working on."
-      >
-        <FeaturedProjects projects={featuredProjects} />
-      </ContentSection>
+      <HomeHero hero={homeHero} />
+      <section className={detailStyles.selectedWork} aria-labelledby="selected-work-title">
+        <p className={detailStyles.eyebrow}>Research · Interaction · Implementation</p>
+        <h2 id="selected-work-title">Selected design work</h2>
+        <p>Explore how I frame problems, develop interactions, and bring designs into working products.</p>
+        <ProjectGrid projects={featuredProjects} />
+      </section>
+      <WorkSection roles={currentRoles} />
+      <SkillsSection skills={skillPills} />
     </main>
   );
 }

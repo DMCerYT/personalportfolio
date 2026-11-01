@@ -1,0 +1,31 @@
+.switch { border: 0; padding: 0; background: transparent; display: inline-grid; place-items: center; width: 44px; height: 32px; flex: 0 0 44px; }
+.visual { display: block; position: relative; width: 38px; height: 18px; }
+.endpoint { display: block; }
+.movingTrack { display: none; position: absolute; inset: 0; border-radius: 10px; background: rgba(95,127,156,.41); backdrop-filter: blur(2px); }
+.trackInset { position: absolute; inset: 2px 3px; border-radius: 8px; background: #5984ab; }
+.thumb { position: absolute; top: 3px; left: 4px; width: 12px; height: 12px; border-radius: 10px; background: #7ba1c5; }
+.animate .endpoint { animation: endpoint var(--toggle-duration) step-end both; }
+.animate .movingTrack { display: block; animation: moving var(--toggle-duration) step-end both; }
+.animate.on .thumb { animation: turnOn var(--toggle-duration) ease-out both; }
+.animate.off .thumb { animation: turnOff var(--toggle-duration) ease-out both; }
+@keyframes endpoint { 0% { visibility: hidden; } 100% { visibility: visible; } }
+@keyframes moving { 0% { visibility: visible; } 100% { visibility: hidden; } }
+@keyframes turnOn {
+  0% { transform: translateX(0); width: 12px; background: #7ba1c5; }
+  35% { transform: translateX(5px); width: 16px; background: #96c2e3; }
+  65% { transform: translateX(10px); width: 16px; background: #96c2e3; }
+  84% { transform: translateX(19px) scaleX(.88) scaleY(1.1); width: 12px; background: #fff; }
+  100% { transform: translateX(18px); width: 12px; background: #fff; }
+}
+@keyframes turnOff {
+  0% { transform: translateX(18px); width: 12px; background: #fff; }
+  35% { transform: translateX(10px); width: 16px; background: #96c2e3; }
+  65% { transform: translateX(5px); width: 16px; background: #96c2e3; }
+  84% { transform: translateX(-1px) scaleX(.88) scaleY(1.1); width: 12px; background: #7ba1c5; }
+  100% { transform: translateX(0); width: 12px; background: #7ba1c5; }
+}
+.switch:focus-visible { outline: 2px solid #fff; outline-offset: 2px; border-radius: 8px; }
+@media (prefers-reduced-motion: reduce) {
+  .animate .endpoint { animation: none; }
+  .animate .movingTrack { display: none; }
+}

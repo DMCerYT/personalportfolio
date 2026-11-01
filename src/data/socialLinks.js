@@ -33,8 +33,8 @@ export const socialLinks = [
   },
   {
     name: 'Email',
-    handle: 'emmetmanuel24@gmail.com',
+    handle: 'emmet.munoz@dmcer.org',
     image: siteAssets.googlePositive,
-    href: 'mailto:emmetmanuel24@gmail.com',
+    href: 'mailto:emmet.munoz@dmcer.org',
   },
 ];

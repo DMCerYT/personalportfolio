@@ -1,14 +1,15 @@
-import { Link } from 'react-router-dom';
+import ResourceLink from './ResourceLink';
 import styles from '../styles/projectCard.module.css';
 
 export default function ProjectCard({
   title,
+  discipline,
   description,
   image,
   imageAlt = '',
   to,
   href,
-  cta = 'Read More',
+  cta = 'View case study',
 }) {
   const content = (
     <>
@@ -16,7 +17,7 @@ export default function ProjectCard({
         <div className={styles.panel}>
           <img className={styles.image} src={image} alt={imageAlt} />
           <div className={styles.titleCard}>
-            <h2>{title}</h2>
+            <div>{discipline ? <p className={styles.discipline}>{discipline}</p> : null}<h2>{title}</h2></div>
           </div>
           <div className={styles.descriptionCard}>
             <p className={styles.desktopDescription}>{description}</p>
@@ -31,27 +32,11 @@ export default function ProjectCard({
     return <article className={styles.card}>{content}</article>;
   }
 
-  if (to) {
-    return (
-      <article className={styles.card}>
-        <Link className={styles.link} to={to} aria-label={`${cta}: ${title}`}>
-          {content}
-        </Link>
-      </article>
-    );
-  }
-
   return (
     <article className={styles.card}>
-      <a
-        className={styles.link}
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`${cta}: ${title}`}
-      >
+      <ResourceLink className={styles.link} href={to || href} aria-label={`${cta}: ${title}`}>
         {content}
-      </a>
+      </ResourceLink>
     </article>
   );
 }

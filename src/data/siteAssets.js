@@ -6,6 +6,13 @@ import atlantaTasteTrekLogo from '../assets/project-assets/atlanta-taste-trek/at
 import focusFarmerLogo from '../assets/project-assets/focus-farmer/focus_farmer_splash_title.png';
 import beanILogo from '../assets/project-assets/beani/beani_logo.svg';
 import moneyMentorLogo from '../assets/project-assets/money-mentor/Money_mentor_Logo.png';
+import playPeekCover from '../assets/project-assets/playpeek/HDIconwithbackground.png';
+import playPeekMiniPlayer from '../assets/project-assets/playpeek/PlayPeek-MiniPlayer_v0.4.png';
+import playPeekMiniPlayerPaused from '../assets/project-assets/playpeek/PlayPeek-MiniPlayer_Paused_v0.4.png';
+import playPeekAppearance from '../assets/project-assets/playpeek/PlayPeek-Appearance_v0.4.png';
+import playPeekHistory from '../assets/project-assets/playpeek/PlayPeek-History_v0.4.png';
+import playPeekGeneralEnglish from '../assets/project-assets/playpeek/PlayPeek-GeneralEN_v0.4.png';
+import playPeekGeneralSpanish from '../assets/project-assets/playpeek/PlayPeek-GeneralES_v0.4.png';
 // Local Test Image
 import capybaraIllustration from '../images/cute-cartoon-capybara-cap-sunglasses-600nw-2575177821.jpg.webp';
 // Social Media Assets
@@ -34,6 +41,13 @@ export const siteAssets = {
   focusFarmerLogo,
   beanILogo,
   moneyMentorLogo,
+  playPeekCover,
+  playPeekMiniPlayer,
+  playPeekMiniPlayerPaused,
+  playPeekAppearance,
+  playPeekHistory,
+  playPeekGeneralEnglish,
+  playPeekGeneralSpanish,
   // Social Media Positive Assets
   facebookPositive,
   githubPositive,
