@@ -3,6 +3,7 @@ import focusFarmer from './projects/focus-farmer';
 import moneyMentor from './projects/money-mentor';
 import beanI from './projects/coffee-bean-recommender';
 import musicMaker from './projects/music-maker';
+import playPeek from './projects/playpeek';
 import { createProject } from './projectModel';
 import { selectShowcaseProjects } from './projectSelectors';
 
@@ -13,6 +14,7 @@ export const projects = [
   moneyMentor,
   beanI,
   musicMaker,
+  playPeek,
 ].map(createProject);
 export const showcaseProjects = selectShowcaseProjects(projects);
 export const featuredProjects = showcaseProjects.filter(project => project.featured);

@@ -97,7 +97,7 @@
 }
 
 .cta {
-  background: var(--surface-background, linear-gradient(180deg, rgba(55, 165, 255, 0.95), rgba(24, 144, 255, 0.88)));
+  background: linear-gradient(180deg, rgba(55, 165, 255, 0.95), rgba(24, 144, 255, 0.88));
   box-shadow: 0 10px 20px rgba(24, 144, 255, 0.16);
   color: #e6f7ff;
 }

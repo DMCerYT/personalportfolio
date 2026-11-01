@@ -92,6 +92,7 @@
   height: 310px;
   justify-content: center;
   transform: rotate(8.2deg);
+  transform-origin: bottom left;
   width: 310px;
 }
 

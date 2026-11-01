@@ -33,6 +33,7 @@ test('keeps single-paragraph projects and labeled placeholders working', () => {
 
 test('places graphics between their associated paragraphs in authored order', () => {
   render(<ProjectDecisions decision={[
+    { type: 'heading', text: 'A decision informed by research' },
     'First paragraph.',
     { type: 'image', title: 'First graphic', src: '/first.png', alt: 'First screenshot', caption: 'Evidence for the first decision.' },
     'Second paragraph.',
@@ -41,11 +42,12 @@ test('places graphics between their associated paragraphs in authored order', ()
   ]} />);
   const section = screen.getByRole('heading', { name: 'Design decisions and rationale' }).closest('section');
   const narrative = Array.from(section.children).slice(2);
-  expect(narrative.map(element => element.tagName)).toEqual(['P', 'DIV', 'P', 'P', 'DIV']);
-  expect(narrative[0]).toHaveTextContent('First paragraph.');
-  expect(within(narrative[1]).getByRole('img', { name: 'First screenshot' })).toHaveAttribute('src', '/first.png');
-  expect(narrative[2]).toHaveTextContent('Second paragraph.');
-  expect(narrative[3]).toHaveTextContent('Third paragraph.');
-  expect(within(narrative[4]).getByRole('img', { name: 'Third screenshot' })).toHaveAttribute('src', '/third.png');
-  expect(within(narrative[4]).getByText('Evidence for the third decision.')).toBeVisible();
+  expect(narrative.map(element => element.tagName)).toEqual(['H3', 'P', 'DIV', 'P', 'P', 'DIV']);
+  expect(within(section).getByRole('heading', { name: 'A decision informed by research', level: 3 })).toBeVisible();
+  expect(narrative[1]).toHaveTextContent('First paragraph.');
+  expect(within(narrative[2]).getByRole('img', { name: 'First screenshot' })).toHaveAttribute('src', '/first.png');
+  expect(narrative[3]).toHaveTextContent('Second paragraph.');
+  expect(narrative[4]).toHaveTextContent('Third paragraph.');
+  expect(within(narrative[5]).getByRole('img', { name: 'Third screenshot' })).toHaveAttribute('src', '/third.png');
+  expect(within(narrative[5]).getByText('Evidence for the third decision.')).toBeVisible();
 });

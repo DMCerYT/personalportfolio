@@ -14,7 +14,7 @@
 
 .desktopNavbar {
   align-items: center;
-  background: var(--surface-background, linear-gradient(135deg, rgba(240, 250, 255, 0.22), rgba(201, 230, 250, 0.12)),
+  background: var(--nav-background, linear-gradient(135deg, rgba(240, 250, 255, 0.22), rgba(201, 230, 250, 0.12)),
     rgba(0, 134, 244, 0.05));
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 0 0 60px 0;
@@ -42,7 +42,7 @@
 }
 
 .desktopNavbar::before {
-  background: var(--surface-background, linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0)));
+  background: var(--nav-highlight-background, linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0)));
   content: '';
   inset: 0 0 auto 0;
   height: 52%;
@@ -113,7 +113,7 @@
 
 .mobileNavbar {
   align-items: center;
-  background: var(--surface-background, linear-gradient(90deg, rgba(240, 250, 255, 0.92), rgba(195, 226, 249, 0.78)),
+  background: var(--nav-background, linear-gradient(90deg, rgba(240, 250, 255, 0.92), rgba(195, 226, 249, 0.78)),
     linear-gradient(90deg, rgba(0, 54, 98, 0.2), rgba(0, 134, 244, 0.2)));
   border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: 21px;
@@ -178,7 +178,7 @@
   align-items: center;
   backdrop-filter: blur(10px) saturate(145%);
   -webkit-backdrop-filter: blur(10px) saturate(145%);
-  background: var(--surface-background, linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(125, 171, 255, 0.18)),
+  background: var(--nav-control-background, linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(125, 171, 255, 0.18)),
     rgba(0, 47, 255, 0.12));
   border: 1px solid rgba(255, 255, 255, 0.36);
   border-radius: 15px;

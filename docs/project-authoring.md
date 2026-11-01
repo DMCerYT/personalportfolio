@@ -63,6 +63,9 @@ Add these fields to the same project object to enable the structured narrative:
 - `evidence`: what you built, observed, or evaluated; distinguish findings from assumptions.
 - `nextStep`: a proposed improvement or future evaluation.
 - `artifacts`: an array of `{ title, src, alt, caption }` objects.
+- `context`: optional array of `{ label, value }` entries shown below your contribution (for team size, course, role, or deliverable).
+- `collaboration`: optional paragraph explaining how your work connected with your teammates' contributions.
+- `reflection`: optional paragraph shown under “What I learned” in the evaluation section.
 
 The existing `process` array becomes the narrative's ordered research/process list. An artifact without `src` displays a clearly labeled placeholder. Add real screenshots and explanatory captions before treating a study as finished.
 
@@ -126,6 +129,10 @@ artifacts: [],
 Save the example graphics at `public/images/projects/playpeek/first.png` and `public/images/projects/playpeek/third.png`, or use registered `siteAssets` values for bundled images. Image blocks use `type: 'image'`, `src`, and descriptive `alt` text, plus optional `title` and `caption`. Without `src`, the block shows a labeled placeholder; provide a title for that placeholder.
 
 Use `artifacts` only for an additional gallery at the end. When moving an existing artifact inline, remove it from `artifacts` to avoid displaying it twice. Existing paragraph-only decision arrays still render normally.
+
+For longer narratives, insert `{ type: 'heading', text: 'A specific design decision' }` in the `decision` array to render an `h3` before the related paragraphs and images. Keep the heading specific to the decision or finding rather than repeating the section title.
+
+Image blocks and artifacts also accept `width` and `height` (the source image's pixel dimensions) to reserve space while loading. Set `fullSize: true` to add a link to open a detailed image at its original size, useful for reading prototype screens on mobile.
 
 ## Modify or reorder projects
 

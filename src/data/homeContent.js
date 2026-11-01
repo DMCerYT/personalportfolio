@@ -1,4 +1,4 @@
-import heroPortrait from '../assets/homepage/hero-portrait.png';
+import heroPortrait from '../assets/homepage/hero-portrait.jpg';
 
 export const homeHero = {
   eyebrow: 'Hola Soy',

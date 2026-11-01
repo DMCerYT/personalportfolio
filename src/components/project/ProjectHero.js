@@ -8,9 +8,15 @@ export default function ProjectHero({ project }) {
       <section className={detailStyles.hero}>
         <img className={detailStyles.image} src={project.image} alt={project.imageAlt} />
         <div className={detailStyles.copy}>
-          <p className={detailStyles.eyebrow}>Design case study</p>
+          <p className={detailStyles.eyebrow}>{project.caseStudyLabel || 'Design case study'}</p>
           <h1>{project.title}</h1>
           <p className={detailStyles.summary}>{project.summary}</p>
+          {project.status ? (
+            <aside className={detailStyles.developmentStatus} aria-label="Development status">
+              <strong>{project.status.label}</strong>
+              <p>{project.status.detail}</p>
+            </aside>
+          ) : null}
           <div className={detailStyles.actions}>
             <Link className={pageStyles.cta} to="/projects">
               Back to Projects
