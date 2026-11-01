@@ -338,11 +338,61 @@
 }
 
 .skillCloud {
-  column-gap: 12px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 214px));
-  justify-content: center;
-  row-gap: 12px;
+  gap: 15px;
+  mask-image: linear-gradient(90deg, transparent 8%, #000 16%, #000 84%, transparent 92%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 8%, #000 16%, #000 84%, transparent 92%);
+  max-width: 760px;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.skillTrack {
+  animation: skillsSlide var(--skills-duration) linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.skillRow:nth-child(2) .skillTrack {
+  animation-delay: -11s;
+}
+
+.skillRow:nth-child(3) .skillTrack {
+  animation-delay: -5s;
+}
+
+.skillGroup {
+  display: flex;
+  flex-shrink: 0;
+  gap: 19px;
+  list-style: none;
+  margin: 0;
+  padding: 0 19px 0 0;
+}
+
+.skillCloud:hover .skillTrack,
+.skillCloud[data-paused='true'] .skillTrack {
+  animation-play-state: paused;
+}
+
+.skillsMotionToggle {
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: inherit;
+  font-size: 0.85rem;
+  margin-top: 20px;
+  padding: 8px 14px;
+}
+
+.skillsMotionToggle[aria-pressed='true'] {
+  background: rgba(24, 144, 255, 0.25);
+}
+
+.skillsMotionToggle:focus-visible {
+  outline: 3px solid #1890ff;
+  outline-offset: 4px;
 }
 
 .skillPill {
@@ -353,53 +403,45 @@
   display: flex;
   font-family: 'Geologica', sans-serif;
   font-size: 1rem;
+  flex: 0 0 214px;
   justify-content: center;
   min-height: 108px;
   padding: 20px;
   text-align: center;
 }
 
-.skillPill1,
-.skillPill6 {
-  position: relative;
+@keyframes skillsSlide {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-.skillPill1::before,
-.skillPill6::after {
-  content: '';
-  inset: 0;
-  position: absolute;
+/* With motion off, expose every skill instead of freezing a clipped subset. */
+:global(body[data-motion='reduced']) .skillCloud {
+  display: flex;
+  flex-wrap: wrap;
+  mask-image: none;
+  -webkit-mask-image: none;
+  overflow: visible;
 }
 
-.skillPill1::before {
-  background: var(--surface-background, linear-gradient(90deg, rgba(102, 120, 137, 0) 0%, rgba(102, 120, 137, 0.88) 100%));
-  border-radius: inherit;
+:global(body[data-motion='reduced']) .skillRow,
+:global(body[data-motion='reduced']) .skillTrack {
+  animation: none;
+  display: contents;
 }
 
-.skillPill6::after {
-  background: var(--surface-background, linear-gradient(90deg, rgba(102, 120, 137, 0.88) 0%, rgba(102, 120, 137, 0) 100%));
-  border-radius: inherit;
+:global(body[data-motion='reduced']) .skillGroup {
+  display: contents;
 }
 
-.skillPill span {
-  position: relative;
-  z-index: 1;
+:global(body[data-motion='reduced']) .skillGroup[aria-hidden='true'],
+:global(body[data-motion='reduced']) .skillsMotionToggle {
+  display: none;
 }
 
-.skillPill1 {
-  transform: translateX(-10px);
-}
-
-.skillPill3 {
-  transform: translateX(18px);
-}
-
-.skillPill4 {
-  transform: translateX(-12px);
-}
-
-.skillPill5 {
-  transform: translateX(12px);
+:global(body[data-motion='reduced']) .skillPill {
+  flex: 1 1 180px;
 }
 
 @keyframes portraitFloat {
@@ -414,6 +456,30 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .skillCloud {
+    display: flex;
+    flex-wrap: wrap;
+    mask-image: none;
+    -webkit-mask-image: none;
+    overflow: visible;
+  }
+
+  .skillRow,
+  .skillTrack,
+  .skillGroup {
+    animation: none;
+    display: contents;
+  }
+
+  .skillGroup[aria-hidden='true'],
+  .skillsMotionToggle {
+    display: none;
+  }
+
+  .skillPill {
+    flex: 1 1 180px;
+  }
+
   .heroPortraitFrame,
   .primaryAction,
   .secondaryAction,
@@ -521,16 +587,4 @@
     padding: 54px 0 62px;
   }
 
-  .skillCloud {
-    grid-template-columns: 1fr;
-    justify-items: stretch;
-  }
-
-  .skillPill,
-  .skillPill1,
-  .skillPill3,
-  .skillPill4,
-  .skillPill5 {
-    transform: none;
-  }
 }
